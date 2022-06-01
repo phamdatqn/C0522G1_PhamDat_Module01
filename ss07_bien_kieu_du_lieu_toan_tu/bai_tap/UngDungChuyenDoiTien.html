@@ -12,28 +12,53 @@
         <th>To Currency</th>
     </tr>
     <tr>
-        <td colspan="2" id="soTien"><input type="text"></td>
+        <td colspan="2"><input id="inputTien" type="number"></td>
         <td>
-            <select>
-                <option id="tienViet" value="tienDo">VND</option>
-                <option id="tienDo" value="tienDo">USD</option>
+            <select id="from">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
             </select>
         </td>
         <td>
-            <select>
-                <option id="tienViet" value="tienDo">VND</option>
-                <option id="tienDo" value="tienDo">USD</option>
+            <select id="from2">
+                <option value="USD">USD</option>
+                <option value="VND">VND</option>
             </select>
         </td>
-        <td><button onclick="thanhTien()">Convert</button></td><br>
+        <td>
+            <button onclick="thanhTien()">Convert</button>
+        </td>
+        <br>
 
     </tr>
 </table>
+<!--<script>-->
+<!--    function thanhTien() {-->
+<!--        var soTien=document.getElementById('inputTien').value;-->
+<!--        var thanhTien=soTien/23000;-->
+<!--        document.getElementById('show').innerHTML='Số tiền sau khi đổi là: '+thanhTien;-->
+
+<!--    }-->
+<!--</script>-->
 <script>
     function thanhTien() {
-        
+        var soTien = document.getElementById('inputTien').value;
+        var tien1 = document.getElementById('from').value;
+        var tien2 = document.getElementById('from2').value;
+        var don
+        if (tien1 !== tien2){
+            if (tien1 === "VND"){
+                soTien = soTien / 23000;
+            }
+             if(tien1 === "USD"){
+                soTien = soTien * 23000;
+             }
+        }
+        document.getElementById('show').innerHTML = 'Tiền sau khi đổi  :' + soTien ;
     }
+
 </script>
 
+<p id="show"></p>
 </body>
 </html>
