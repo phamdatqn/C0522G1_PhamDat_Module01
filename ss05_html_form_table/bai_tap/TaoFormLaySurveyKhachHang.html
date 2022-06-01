@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C0522G1 - PHAM DAT</title>
+</head>
+<style>
+    label {
+        color: royalblue;
+    }
+</style>
+<body>
+<h1><strong> Market Research Survey</strong></h1>
+Please take a few moments to complete this satisfaction survey.<br><br><br>
+<form id="doimau1" onclick="myFunction1()">
+    <label>What is your age range?</label><br>
+    <select STYLE="width: 70%">
+        <option>18 - 24</option>
+        <option>25 - 34</option>
+        <option>35 - 50</option>
+        <option>50+</option>
+    </select>
+</form><br><br>
+<form id="doimau2" onclick="myFunction2()">
+    <label >What is your yearly income range?</label><br>
+    <select STYLE="width: 70%">
+        <option>$0 - $25,000</option>
+        <option>$25,001 - $50,000</option>
+        <option>$50,001 - $100,000</option>
+        <option>$100,000+</option>
+
+    </select>
+</form><br><br>
+
+<form id="doimau3" onclick="myFunction3()">
+    <label>Gender Identity</label><br>
+   <input type="radio" name="gender" checked>Male<br>
+   <input type="radio" name="gender" checked>Female<br>
+   <input type="radio" name="gender" checked>Nobilary<br>
+   <input type="radio" name="gender" checked>Other<br>
+   <input type="text" name="gender" checked><br>
+</form><br><br>
+
+<form id="doimau4" onclick="myFunction4()">
+    <label>Which of the following products have your purchased in the last 2 months. Please check all that apply.</label><br>
+    <input type="checkbox">  Product 1<br>
+    <input type="checkbox">  Product 2<br>
+    <input type="checkbox">  Product 3<br>
+</form><br><br>
+
+<form id="doimau5" onclick="myFunction5()">
+    <label>How often would you use our new product?</label><br>
+    <input type="radio" name="thoigian" checked>  Daily<br>
+    <input type="radio" name="thoigian" checked>  Weekly<br>
+    <input type="radio" name="thoigian" checked>  Monthly
+</form><br><br>
+
+<form id="doimau6" onclick="myFunction6()">
+    <label>What would you pay for the new product?</label><br>
+   <table>
+       <tr>
+           <td>$</td>
+           <td colspan="4"> <input size="10px" type="text"></td>
+           <td> . </td>
+           <td> <input size="2" type="text"> </td>
+       </tr>
+       <tr>
+           <td></td>
+           <td colspan="5" style="text-align: left"> Dollars</td>
+           <td>Cents</td>
+       </tr>
+   </table>
+</form><br><br>
+
+<form id="doimau7" onclick="myFunction7()">
+    <label> What features would you like to see in the new product.</label><br>
+    <textarea style="width: 100%"></textarea>
+</form>
+
+
+<script>
+    function myFunction1() {
+    document.getElementById("doimau1").style.background=  "#FFFF66";
+    document.getElementById("doimau2").style.background=  "white";
+    document.getElementById("doimau3").style.background=  "white";
+    document.getElementById("doimau4").style.background=  "white";
+    document.getElementById("doimau5").style.background=  "white";
+    document.getElementById("doimau6").style.background=  "white";
+    document.getElementById("doimau7").style.background=  "white";
+    }
+
+    function myFunction2() {
+        document.getElementById("doimau2").style.background=  "#CCFFFF";
+        document.getElementById("doimau1").style.background=  "white";
+        document.getElementById("doimau3").style.background=  "white";
+        document.getElementById("doimau4").style.background=  "white";
+        document.getElementById("doimau5").style.background=  "white";
+        document.getElementById("doimau6").style.background=  "white";
+        document.getElementById("doimau7").style.background=  "white";
+    }
+
+    function myFunction3() {
+        document.getElementById("doimau3").style.background=  "#FFFFCC";
+        document.getElementById("doimau1").style.background=  "white";
+        document.getElementById("doimau2").style.background=  "white";
+        document.getElementById("doimau4").style.background=  "white";
+        document.getElementById("doimau5").style.background=  "white";
+        document.getElementById("doimau6").style.background=  "white";
+        document.getElementById("doimau7").style.background=  "white";
+    }
+
+    function myFunction4() {
+        document.getElementById("doimau4").style.background=  "#FFFF66";
+        document.getElementById("doimau1").style.background=  "white";
+        document.getElementById("doimau3").style.background=  "white";
+        document.getElementById("doimau2").style.background=  "white";
+        document.getElementById("doimau5").style.background=  "white";
+        document.getElementById("doimau6").style.background=  "white";
+        document.getElementById("doimau7").style.background=  "white";
+    }
+    function myFunction5() {
+        document.getElementById("doimau5").style.background=  "#CCFFFF";
+        document.getElementById("doimau2").style.background=  "white";
+        document.getElementById("doimau3").style.background=  "white";
+        document.getElementById("doimau4").style.background=  "white";
+        document.getElementById("doimau1").style.background=  "white";
+        document.getElementById("doimau6").style.background=  "white";
+        document.getElementById("doimau7").style.background=  "white";
+    }
+    function myFunction6() {
+        document.getElementById("doimau6").style.background=  "#FFFFCC";
+        document.getElementById("doimau2").style.background=  "white";
+        document.getElementById("doimau3").style.background=  "white";
+        document.getElementById("doimau4").style.background=  "white";
+        document.getElementById("doimau5").style.background=  "white";
+        document.getElementById("doimau1").style.background=  "white";
+        document.getElementById("doimau7").style.background=  "white";
+    }
+    function myFunction7() {
+        document.getElementById("doimau7").style.background=  "#FF9999";
+        document.getElementById("doimau3").style.background=  "white";
+        document.getElementById("doimau4").style.background=  "white";
+        document.getElementById("doimau5").style.background=  "white";
+        document.getElementById("doimau1").style.background=  "white";
+        document.getElementById("doimau6").style.background=  "white";
+    }
+</script>
+</body>
+</html>
