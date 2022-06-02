@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let inPut=parseInt(prompt('Nhập năm để kiểm tra: '));
+    // if (inPut%4===0){
+    //     if (inPut%100===0){
+    //         if (inPut%400===0){
+    //             alert(inPut+' Là năm nhuận');
+    //         }
+    //         else {
+    //             alert(inPut+' Là năm không nhuận')
+    //         }
+    //
+    //     }else {
+    //         alert(inPut+' Là năm nhuận')
+    //     }
+    // }else {
+    //     alert(inPut+' Là năm không nhuận')
+    // }
+    let year = parseInt(prompt("Enter a year"));
+    let isLeapYear = false;
+
+    let isDivisibleBy4 = year % 4 === 0;
+    if (isDivisibleBy4) {
+        let isDivisibleBy100 = year % 100 === 0;
+        if (isDivisibleBy100) {
+            let isDivisibleBy400 = year % 400 === 0;
+            if (isDivisibleBy400) {
+                isLeapYear = true;
+            }
+        } else {
+            isLeapYear = true;
+        }
+    }
+
+    if (isLeapYear) {
+        alert(year + " is a leap year");
+    } else {
+        alert(year + " is NOT a leap year");
+    }
+</script>
+</body>
+</html>

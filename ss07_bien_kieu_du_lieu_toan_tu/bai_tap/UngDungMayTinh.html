@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th colspan="2">Nhập số thứ 1:</th>
+        <th colspan="2">Nhập số thứ 2:</th>
+    </tr>
+    <tr>
+        <td colspan="2"><input type="number" id="soThuNhat"></td>
+        <td colspan="2"><input type="number" id="soThuHai"></td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button"  onclick="phepTinh('*')">Nhân</button>
+        </td>
+        <td>
+            <button type="button" onclick="phepTinh('/')">Chia</button>
+        </td>
+        <td>
+            <button type="button" onclick="phepTinh('+')">Cộng</button>
+        </td>
+        <td>
+            <button type="button" onclick="phepTinh('-')">Trừ</button>
+        </td>
+    </tr>
+    <tr>
+        <td>Kết quả:</td>
+        <td><input id="show"></td>
+    </tr>
+</table>
+
+<script>
+    function phepTinh(tinh) {
+        let soThuNhat = parseInt(document.getElementById('soThuNhat').value);
+        let soThuHai = parseInt(document.getElementById('soThuHai').value);
+        if (tinh === "*") {
+            let result = soThuNhat * soThuHai
+            document.getElementById('show').value = soThuNhat + ' * ' + soThuHai + ' = ' + result;
+        }else if (tinh==="/"){
+            let result=soThuNhat/soThuHai
+            document.getElementById('show').value = soThuNhat + ' / ' + soThuHai + ' = ' + result;
+        }else if (tinh==="+"){
+            let result=soThuNhat+soThuHai
+            document.getElementById('show').value = soThuNhat + ' + ' + soThuHai + ' = ' + result;
+        }else {
+            let result=soThuNhat-soThuHai
+            document.getElementById('show').value = soThuNhat + ' - ' + soThuHai + ' = ' + result;
+        }
+    }
+</script>
+</body>
+</html>

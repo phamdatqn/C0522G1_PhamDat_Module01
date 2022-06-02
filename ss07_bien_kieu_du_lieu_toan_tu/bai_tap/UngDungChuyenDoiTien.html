@@ -31,7 +31,9 @@
         <br>
 
     </tr>
+
 </table>
+
 <!--<script>-->
 <!--    function thanhTien() {-->
 <!--        var soTien=document.getElementById('inputTien').value;-->
@@ -42,10 +44,11 @@
 <!--</script>-->
 <script>
     function thanhTien() {
+
         var soTien = document.getElementById('inputTien').value;
+        var tienCanDoi=soTien;
         var tien1 = document.getElementById('from').value;
         var tien2 = document.getElementById('from2').value;
-        var don
         if (tien1 !== tien2){
             if (tien1 === "VND"){
                 soTien = soTien / 23000;
@@ -54,7 +57,7 @@
                 soTien = soTien * 23000;
              }
         }
-        document.getElementById('show').innerHTML = 'Tiền sau khi đổi  :' + soTien ;
+        document.getElementById('show').innerHTML = tienCanDoi+' '+ tien1 +' = '+ soTien + ' '+ tien2 ;
     }
 
 </script>

@@ -5,10 +5,17 @@
     <title>C0522G1 - PHAM DAT</title>
 </head>
 <script>
-    var x= 83;
-    var y=9;
-    var c=x%y
-    alert(+c);
+    switch (new Date().getDay()) {
+        case 6:
+            text = "Today is Saturday";
+           break;
+        case 0:
+            text = "Today is Sunday";
+         //   break;
+        default:
+            text = "Looking forward to the Weekend";
+    }
+    document.write(text);
 </script>
 </body>
 </html>
