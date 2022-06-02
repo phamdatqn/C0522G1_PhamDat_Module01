@@ -5,32 +5,34 @@
     <title>C0522G1 - PHAM DAT</title>
 </head>
 <style>
-    th {
-        font-size: 30px;
-        margin-left: 30px;
-        color: white;
-        background-color: red;
-    }
-
+    /*th {*/
+    /*    font-size: 30px;*/
+    /*    margin-left: 30px;*/
+    /*    color: white;*/
+    /*    background-color: red;*/
+    /*}*/
+    /*td{*/
+    /*    text-align: center;*/
+    /*}*/
 
 </style>
 <body>
 <form action="TaoFormĐonGian.html" method="get">
-    <table align="center" >
+    <table align="center">
         <tr>
-            <th colspan="8">SỞ THÍCH CỦA BẠN</th>
+            <th colspan="8" bgcolor="#cd5c5c" style="color: #dddddd">SỞ THÍCH CỦA BẠN</th>
         </tr>
         <tr>
-            <td  style="text-align: right;color: blue"  >Họ và tên :</td>
-            <td colspan="3" ><input style="width: 95%" type="text" name="name"></td>
+            <td style="text-align: right;color: blue">Họ và tên :</td>
+            <td colspan="3"><input style="width: 95%" type="text" name="name"></td>
 
         </tr>
         <tr>
-            <td style="text-align: left;color: blue" >Email :</td>
-            <td colspan="3"> <input style="width: 95%" type="text" name="email"></td>
+            <td style="text-align: left;color: blue">Email :</td>
+            <td colspan="3"><input style="width: 95%" type="text" name="email"></td>
         </tr>
         <tr>
-            <td style="color: blue"  > Sở thích :</td>
+            <td style="color: blue"> Sở thích :</td>
             <td><input type="checkbox" name="thethao"> Thể thao</td>
             <td><input type="checkbox" name="amnhac"> Âm nhạc</td>
             <td><input type="checkbox" name="docsach"> Đọc sách</td>
@@ -47,8 +49,69 @@
         </tr>
         <tr>
             <td></td>
-            <td > <input type="submit" value="Gửi thông tin"></input></td>
+            <td><input type="submit" value="Gửi thông tin"></input></td>
             <td><input type="reset" value="Nhập lại"></input></td>
+        </tr>
+    </table>
+
+</form>
+<br>
+<br>
+<br>
+
+<form>
+
+
+    <table  align="center" width="40%" bgcolor="#fafad2">
+        <tr>
+            <th colspan="3" bgcolor="#ff8c00" style="color: #dddddd" c> ĐĂNG KÝ HỌC VIÊN</th>
+        </tr>
+        <tr>
+            <td align="right">Họ và tên :</td>
+            <td colspan="2"><input type="text" style="width: 80%"></td>
+
+
+        </tr>
+        <tr>
+            <td align="right">Ngày sinh :</td>
+            <td colspan="2"><input type="text" style="width: 40%"></td>
+
+
+        </tr>
+        <tr>
+            <td align="right">Giới tính:</td>
+            <td><input type="radio" name="gender">Nam <input type="radio" name="gender">Nữ</td>
+
+        </tr>
+        <tr>
+            <td align="right">Địa chỉ</td>
+            <td><textarea style="width: 97%"></textarea></td>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">Lớp :</td>
+            <td colspan="2">
+                <select >
+                    <option value="" selected disabled hidden>- Chọn Lớp -</option>
+                    <option>Lớp 1</option>
+                    <option>Lớp 2</option>
+                    <option>Lớp 3</option>
+                    <option>Lớp 4</option>
+                    <option>Lớp 5</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">Email: </td>
+            <td colspan="2"><input type="text" style="width: 60%"></td>
+        </tr>
+        <tr>
+            <td align="right">Điện thoại: </td>
+            <td colspan="2"><input type="text" style="width: 60%"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Đăng ký" > <input type="reset" value="Nhập lại"></td>
         </tr>
     </table>
 </form>
