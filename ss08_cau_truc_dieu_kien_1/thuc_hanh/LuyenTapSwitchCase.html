@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //                 cau 1
+    // let browser = prompt('Bạn dùng trình duyệt nào ?');
+    // switch (browser) {
+    //     case 'Edge':
+    //         alert('Bạn đã có Edge');
+    //         break;
+    //     case 'Chrome':
+    //     case 'Firefox':
+    //     case 'Safari':
+    //     case 'Opera':
+    //         alert('Oke chúng tôi cũng hỗ trợ trình duyệt này !')
+    //         break;
+    //     default:
+    //         alert('Rất tiếc chúng tôi không hỗ trợ trình duyệt này')
+    // }
+
+
+    //                             bai 2
+    //     let a = +prompt('nhap a ?','');
+    //     switch (a) {
+    //         case 0:
+    //             alert(0);
+    //             break;
+    //         case 1:
+    //             alert(1);
+    //             break;
+    //         case 2:
+    //         case 3:
+    //             alert('2,3');
+    //             break;
+    //     }
+
+    // bai 2 so sanh chuoi
+    // let a = prompt('nhap a ?');
+    // switch (a) {
+    //     case '0':
+    //         alert('0');
+    //         break;
+    //     case '1':
+    //         alert('1');
+    //         break;
+    //     case '2':
+    //     case '3':
+    //         alert('2,3');
+    //         break;
+    // }
+
+
+    let a = +prompt('Nhập 1 số ');
+    let duong = a > 0;
+    let am = a < 0;
+    switch (true) {
+        case duong:
+            alert(1);
+            break;
+        case am:
+            alert(-1);
+            break;
+        default:
+            alert(0)
+
+    }
+</script>
+</body>
+</html>

@@ -6,10 +6,11 @@
 </head>
 <body>
 <script>
-    var diemtoan= parseInt(prompt('Nhập điểm Toán: '));
-    var diemly= parseInt(prompt('Nhập điểm Lý: '));
-    var diemhoa= parseInt(prompt('Nhập điểm Hóa: '));
+    var diemtoan= +prompt('Nhập điểm Toán: ');
+    var diemly= +prompt('Nhập điểm Lý: ');
+    var diemhoa= +prompt('Nhập điểm Hóa: ');
     var tongdiem=diemtoan+diemly+diemhoa;
+    document.write('Điểm toán là: '+ diemtoan +"<br>"+ "Điểm hóa là: "+diemhoa+"<br>"+ "Điêm lý là: "+diemly +"<br>");
     document.write('Tổng điểm 3 môn Toán, Lý, Hóa là: '+ tongdiem);
     document.write('<br>')
     document.write('Điểm trung bình 3 môn Toán, Lý, Hóa là: '+ tongdiem/3);

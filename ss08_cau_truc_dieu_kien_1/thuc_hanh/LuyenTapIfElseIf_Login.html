@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let useName=prompt('Mời nhập tài khoản: ' );
+    if (useName=="Admin"){
+        let pass=prompt('Mời nhập mật khẩu: ');
+        if (pass=="theMaster"){
+        alert('Chào mừng Admin');
+        }else if (pass==null){
+            alert('Bạn đã thoát');
+        }else {
+            alert('Mật khẩu sai');
+        }
+
+    }else if (useName==null) {
+        alert('Bạn đã thoát');
+    }else {
+        alert(' Sai tài khoản')
+    }
+
+</script>
+</body>
+</html>
