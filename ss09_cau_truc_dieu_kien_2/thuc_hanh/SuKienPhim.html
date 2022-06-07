@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="docReady()">
+<img src="traibanh.jpg" id="traiBanh" width="200" style="position: absolute; top: 0; left: 0 ">
+<script>
+    let element = document.getElementById('traiBanh');
+
+    function upArrowPresed() {
+
+        element.style.top = parseInt(element.style.top) -5 + 'px';
+    }
+
+    function downArrowPresed() {
+
+        element.style.top = parseInt(element.style.top) + 5 + 'px';
+    }
+
+    function rightArrowPresed() {
+
+        element.style.left = parseInt(element.style.left) + 5 + 'px';
+    }
+
+    function leftArrowPresed() {
+
+        element.style.left = parseInt(element.style.left) - 5 + 'px';
+    }
+
+    function moveSelection(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                leftArrowPresed();
+                break;
+            case 38:
+                upArrowPresed();
+                break;
+            case 39:
+                rightArrowPresed();
+                break;
+            case 40:
+                downArrowPresed();
+                break;
+        }
+    }
+        function docReady() {
+            window.addEventListener('keydown', moveSelection);
+        }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><label>Nhập số phút gọi nội mạng: </label></td>
+        <td><input type="number" id="inputNoiMang"><br></td>
+    </tr>
+    <tr>
+        <td><label>Nhập số phút gọi ngoại mạng: </label></td>
+        <td><input type="number" id="inputNgoaiMang"><br></td>
+    </tr>
+    <tr>
+        <td><label>Nhập số phút gọi quốc tế: </label></td>
+        <td><input type="number" id="inputQuocTe"><br></td>
+    </tr>
+    <tr>
+        <td><input type="button" onclick="tinhToan()" value="Tính số tiền"></td>
+    </tr>
+    <span id="show"></span>
+</table>
+<script>
+ function tinhToan() {
+    let noimang=+document.getElementById('inputNoiMang').value;
+    if (noimang<50){
+        let sotiennoimang= noimang*990;
+    }else {
+        
+    }
+
+    let ngoaimang=+document.getElementById('inputNgoaiMang').value;
+    let sotienngoaimang=ngoaimang*1300;
+    let quocte=+document.getElementById('inputQuocTe').value;
+    let sotienquocte=quocte*25000;
+ }
+</script>
+</body>
+</html>

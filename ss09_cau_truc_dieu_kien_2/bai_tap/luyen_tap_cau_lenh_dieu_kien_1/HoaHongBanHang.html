@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhập danh số bán hàng tháng này</label>
+<input type="number" id="inputDanhSo">
+<button type="button" onclick="kiemTra()" > Kiểm Tra HH</button><br>
+<span id="show"></span>
+
+<script>
+    function kiemTra() {
+        let danhSo=+document.getElementById('inputDanhSo').value;
+        let bonus;
+        if (danhSo<1000000){
+            bonus=danhSo/100;
+            document.getElementById('show').innerHTML="Rất tiếc danh số dưới 1.000.000 nên chỉ được 1% hoa hồng : "+bonus+" VNĐ";
+        }else if (danhSo<10000000){
+            bonus=(danhSo*5)/100;
+            document.getElementById('show').innerHTML="Danh số Khá dưới 10.000.000 nên được 5% hoa hồng : "+bonus+" VNĐ";
+        }else {
+            bonus=(danhSo*10)/100;
+            document.getElementById('show').innerHTML="Danh số Xuất Sắc trên 10.000.000 nên được 10% hoa hồng : "+bonus+" VNĐ";
+        }
+    }
+</script>
+</body>
+</html>

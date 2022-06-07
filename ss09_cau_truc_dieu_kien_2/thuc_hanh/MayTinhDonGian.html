@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .DesignButton {
+            height: 60px;
+            width: 60px;
+        }
+    </style>
+</head>
+<body>
+<br><br><br>
+<form name="calculator">
+    <table style="margin-left: 45%">
+        <tr>
+            <td colspan="4">
+                <input type="text" name="show" style="text-align: right;width: 97%" disabled>
+            </td>
+        </tr>
+        <tr>
+            <td><input class="DesignButton" type="button" name="mot" value="1" onclick="calculator.show.value += 1">
+            </td>
+            <td><input class="DesignButton" type="button" name="hai" value="2" onclick="calculator.show.value += 2">
+            </td>
+            <td><input class="DesignButton" type="button" name="ba" value="3" onclick="calculator.show.value += 3"></td>
+            <td><input class="DesignButton" type="button" class="PhepTinh" name="plus" value="+"
+                       onclick="calculator.show.value += '+'"></td>
+        </tr>
+        <tr>
+            <td><input class="DesignButton" type="button" name="bon" value="4" onclick="calculator.show.value += 4">
+            </td>
+            <td><input class="DesignButton" type="button" name="nam" value="5" onclick="calculator.show.value += 5">
+            </td>
+            <td><input class="DesignButton" type="button" name="sau" value="6" onclick="calculator.show.value += 6">
+            </td>
+            <td><input class="DesignButton" type="button" class="PhepTinh" name="tru" value="-"
+                       onclick="calculator.show.value += '-'"></td>
+        </tr>
+        <tr>
+            <td><input class="DesignButton" type="button" name="bay" value="7" onclick="calculator.show.value += 7">
+            </td>
+            <td><input class="DesignButton" type="button" name="tam" value="8" onclick="calculator.show.value += 8">
+            </td>
+            <td><input class="DesignButton" type="button" name="chin" value="9" onclick="calculator.show.value += 9">
+            </td>
+            <td><input class="DesignButton" type="button" class="PhepTinh" name="nhan" value="x"
+                       onclick="calculator.show.value += '*'"></td>
+        </tr>
+        <tr>
+            <td><input class="DesignButton" type="button" class="PhepTinh" id="xoa" name="clear" value="C"
+                       onclick="calculator.show.value = ''"></td>
+            <td><input class="DesignButton" type="button" class="PhepTinh" name="zero" value="0"
+                       onclick="calculator.show.value += '0'"></td>
+            <td><input class="DesignButton" type="button" class="PhepTinh" name="ketqua" value="="
+                       onclick="calculator.show.value = eval(calculator.show.value)"></td>
+            <td><input class="DesignButton" type="button" class="PhepTinh" name="chia" value="/"
+                       onclick="calculator.show.value += '/'"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

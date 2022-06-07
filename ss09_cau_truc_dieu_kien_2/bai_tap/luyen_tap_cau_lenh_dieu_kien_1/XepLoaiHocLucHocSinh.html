@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="show"></div>
+<script>
+    let diemKiemTra=+prompt('Nhập điểm kiểm tra của học sinh: ');
+    let diemGiuaKy=+prompt('Nhập điểm kiểm tra của học sinh: ');
+    let diemCuoiKy=+prompt('Nhập điểm kiểm tra của học sinh: ');
+    let tongDiem=(diemKiemTra+diemGiuaKy*2+diemCuoiKy*3)/6;
+    let hocLuc;
+    if (tongDiem<4){
+        hocLuc='Xếp loại Kém'
+    }else if (tongDiem<5){
+        hocLuc='Xếp loại Yếu'
+    }else if (tongDiem<6.5){
+        hocLuc='Xếp loại Trung Bình'
+    }else if (tongDiem<8.5){
+        hocLuc='Xếp loại Khá'
+    }else {
+        hocLuc='Xếp loại Giỏi'
+    }
+    document.getElementById('show').innerHTML="Điểm Kiểm Tra: "+diemKiemTra
+        +"<br> Điểm Giữa Kỳ: "+diemGiuaKy
+        +"<br>Điểm Cuối Kỳ: "+diemCuoiKy
+        +"<br>Tổng điểm trung bình là :"+tongDiem
+        +"<br> "+hocLuc;
+
+</script>
+</body>
+</html>

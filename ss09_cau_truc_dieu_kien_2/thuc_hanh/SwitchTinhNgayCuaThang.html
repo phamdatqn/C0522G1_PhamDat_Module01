@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập tháng cần tìm: </p>
+<input type="number" id="inPutNumber" >
+<button type="button" onclick="tinh()"> Tính</button>
+<div id="show"></div>
+<script>
+    function tinh() {
+        let thang = parseInt(document.getElementById('inPutNumber').value);
+        switch (thang) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById('show').innerText="Tháng "+thang+" là tháng có 31 ngày";
+                break;
+            case 2:
+                document.getElementById('show').innerText="Tháng 2 có 28 hoặc 29 ngày ";
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.getElementById('show').innerText= "Tháng "+thang+" là tháng có 30 ngày "
+                break;
+                default:
+                    document.getElementById('show').innerText= " Bạn nhập sai tháng, mời bạn nhập lại !!"
+        }
+    }
+</script>
+</body>
+</html>

@@ -6,14 +6,14 @@
 </head>
 <body>
 <script>
-    var diemtoan= +prompt('Nhập điểm Toán: ');
-    var diemly= +prompt('Nhập điểm Lý: ');
-    var diemhoa= +prompt('Nhập điểm Hóa: ');
-    var tongdiem=diemtoan+diemly+diemhoa;
-    document.write('Điểm toán là: '+ diemtoan +"<br>"+ "Điểm hóa là: "+diemhoa+"<br>"+ "Điêm lý là: "+diemly +"<br>");
-    document.write('Tổng điểm 3 môn Toán, Lý, Hóa là: '+ tongdiem);
+    var scoresMath= parseFloat(prompt('Nhập điểm Toán: '));
+    var scoresPhycical= parseFloat(prompt('Nhập điểm Lý: '));
+    var scoresChemistry= parseFloat(prompt('Nhập điểm Hóa: '));
+    var result=scoresMath+scoresChemistry+scoresPhycical;
+    document.write('Điểm toán là: '+ scoresMath +"<br>"+ "Điểm hóa là: "+scoresChemistry+"<br>"+ "Điêm lý là: "+scoresPhycical +"<br>");
+    document.write('Tổng điểm 3 môn Toán, Lý, Hóa là: '+ result);
     document.write('<br>')
-    document.write('Điểm trung bình 3 môn Toán, Lý, Hóa là: '+ tongdiem/3);
+    document.write('Điểm trung bình 3 môn Toán, Lý, Hóa là: '+ result/3);
 </script>
 </body>
 </html>

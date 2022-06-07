@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="show"></div>
+<script>
+    let numberA=+prompt('Nhập số A: ');
+    let numberB=+prompt('Nhập số B: ');
+    if (numberA%numberB==0){
+        document.getElementById('show').innerText="Số "+numberA+ " chia hết cho "+numberB;
+    }else {
+        document.getElementById('show').innerText="Số "+numberA+ " không Chia hết cho "+numberB;
+    }
+</script>
+</body>
+</html>

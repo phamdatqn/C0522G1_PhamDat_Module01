@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img width="200" src="traibanh.jpg" id="banh"><br>
+
+<button id="chayBanh" onclick="chayBanh()"> Click me</button>
+<script>
+    let viTri = document.getElementById('banh')
+    function init() {
+        viTri.style.position = 'relative';
+        viTri.style.left = '0px';
+    }
+    function chayBanh() {
+        viTri.style.left = parseInt(viTri.style.left) + 10 + 'px';
+    }
+    window.onload = init;
+</script>
+</body>
+</html>

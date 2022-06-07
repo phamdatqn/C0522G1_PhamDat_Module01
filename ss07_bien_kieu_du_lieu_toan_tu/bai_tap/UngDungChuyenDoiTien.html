@@ -20,7 +20,7 @@
             </select>
         </td>
         <td>
-            <select id="from2">
+            <select id="to">
                 <option value="USD">USD</option>
                 <option value="VND">VND</option>
             </select>
@@ -48,7 +48,7 @@
         var soTien = document.getElementById('inputTien').value;
         var tienCanDoi=soTien;
         var tien1 = document.getElementById('from').value;
-        var tien2 = document.getElementById('from2').value;
+        var tien2 = document.getElementById('to').value;
         if (tien1 !== tien2){
             if (tien1 === "VND"){
                 soTien = soTien / 23000;

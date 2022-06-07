@@ -24,7 +24,7 @@
 
 
     //                             bai 2
-    //     let a = +prompt('nhap a ?','');
+    //     let  = +prompt('nhap a ?','');
     //     switch (a) {
     //         case 0:
     //             alert(0);
@@ -54,14 +54,14 @@
     // }
 
 
-    let a = +prompt('Nhập 1 số ');
-    let duong = a > 0;
-    let am = a < 0;
+    let number = parseFloat(prompt('Nhập 1 số '));
+    let positiveNumber = number > 0;
+    let negativeNumber = number < 0;
     switch (true) {
-        case duong:
+        case positiveNumber:
             alert(1);
             break;
-        case am:
+        case negativeNumber:
             alert(-1);
             break;
         default:
