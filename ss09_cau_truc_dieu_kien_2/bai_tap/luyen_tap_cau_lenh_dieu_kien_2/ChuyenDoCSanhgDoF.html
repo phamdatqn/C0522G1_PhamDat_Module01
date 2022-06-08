@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th colspan="2">Input</th>
+        <th>From </th>
+        <th>To </th>
+    </tr>
+    <tr>
+        <td colspan="2"><input id="input" type="number"></td>
+        <td>
+            <select id="from">
+                <option value="Độ C">Độ C</option>
+                <option value="Độ F">Độ F</option>
+            </select>
+        </td>
+        <td>
+            <select id="to">
+                <option value="Độ F">Độ F</option>
+                <option value="Độ C">Độ C</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="doiNhiet()">Convert</button>
+        </td>
+    </tr>
+</table>
+<script>
+    function doiNhiet() {
+        let input=parseFloat(document.getElementById('input').value);
+        let doForm=document.getElementById('from').value;
+        let toForm=document.getElementById('to').value;
+        let result=input;
+        if (doForm!== toForm){
+            if (doForm=="Độ C"){
+                result=(9*input+160)/5;
+            }
+            if(doForm=="Độ F") {
+                result=(input*5-160)/9;
+            }
+        }
+        document.getElementById('show').innerHTML=input +" "+ doForm+" = "+result+" "+toForm;
+
+        }
+
+</script>
+<p id="show"></p>
+</body>
+</html>

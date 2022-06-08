@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Nhập số tiền vay:</td>
+        <td><input id="inputMoney" type="number"></td>
+    </tr>
+    <tr>
+        <td>Nhập số tháng vay:</td>
+        <td><input id="inputMonth"></td>
+    </tr>
+    <tr>
+        <td>Chọn lãi xuất</td>
+        <td>
+            <select id="select">
+                <option value="0.01">1%</option>
+                <option value="0.02">2%</option>
+                <option value="0.03">3%</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><input onclick="check()" type="button" value="Tính Lãi"></td>
+    </tr>
+</table>
+<span id="show"></span>
+<script>
+    function check() {
+        let money = parseFloat(document.getElementById('inputMoney').value);
+        let month = parseFloat(document.getElementById('inputMonth').value);
+        let interestRateSelect = parseFloat(document.getElementById('select').value);
+        let amount = money *Math.pow(( 1 + interestRateSelect),month);
+        let interest=amount-money;
+        document.getElementById('show').innerHTML="Lãi xuất "+month+ " là: "+interest;
+    }
+</script>
+</body>
+</html>

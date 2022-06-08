@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th colspan="2">Input</th>
+        <th>From</th>
+        <th>To</th>
+    </tr>
+    <tr>
+        <td colspan="2"><input id="input" type="number"></td>
+        <td>
+            <select id="from">
+                <option value="Mét">Mét</option>
+                <option value="Feet">Feet</option>
+            </select>
+        </td>
+        <td>
+            <select id="to">
+                <option value="Feet">Feet</option>
+                <option value="Mét">Mét</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="doi()">Convert</button>
+        </td>
+    </tr>
+</table>
+<span id="show"></span>
+</body>
+<script>
+    function doi() {
+        let input = parseFloat(document.getElementById('input').value);
+        let from  = document.getElementById('from').value;
+        let to = document.getElementById('to').value;
+        let result = input;
+        if (from !== to) {
+            if (from == "Mét") {
+                result = (input * (3.2808));
+            }
+            if (from == "Feet") {
+                result = (input / 3.2808);
+            }
+        }document.getElementById('show').innerHTML = input +" "+ from+" bằng  " + result +" "+ to;
+
+    }
+
+</script>
+</html>

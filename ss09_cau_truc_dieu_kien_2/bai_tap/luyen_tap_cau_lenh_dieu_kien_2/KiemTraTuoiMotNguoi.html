@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputNumber = prompt('Nhập tuổi: ','');
+    if (inputNumber == "") {
+        alert('Không thể để trống ');
+    }else {
+        inputNumber = parseInt(inputNumber);
+        if (inputNumber < 0) {
+            alert('Số tuổi không thể nhỏ hơn 0');
+        } else if (inputNumber < 120) {
+            alert('là tuổi của 1 người');
+        } else {
+            alert('Không phải là tuổi của 1 người');
+        }
+    }
+
+</script>
+</body>
+</html>

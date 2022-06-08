@@ -21,22 +21,40 @@
     <tr>
         <td><input type="button" onclick="tinhToan()" value="Tính số tiền"></td>
     </tr>
-    <span id="show"></span>
-</table>
-<script>
- function tinhToan() {
-    let noimang=+document.getElementById('inputNoiMang').value;
-    if (noimang<50){
-        let sotiennoimang= noimang*990;
-    }else {
-        
-    }
 
-    let ngoaimang=+document.getElementById('inputNgoaiMang').value;
-    let sotienngoaimang=ngoaimang*1300;
-    let quocte=+document.getElementById('inputQuocTe').value;
-    let sotienquocte=quocte*25000;
- }
+</table>
+<span id="show"></span>
+<script>
+
+    function tinhToan() {
+        let noiMang = parseFloat(document.getElementById('inputNoiMang').value);
+        let ngoaiMang = parseFloat(document.getElementById('inputNgoaiMang').value);
+        let quocTe = parseFloat(document.getElementById('inputQuocTe').value);
+        let soTienNoiMang = 0;
+        let soTienNgoaiMang = 0;
+        let soTienQuocTe = 0;
+        if (noiMang < 50 && noiMang > 0) {
+            soTienNoiMang = noiMang * 990;
+        } else if (noiMang >= 50) {
+            soTienNoiMang = noiMang * 800;
+        }
+
+        if (ngoaiMang > 0 && ngoaiMang < 50) {
+            soTienNgoaiMang = ngoaiMang * 1300;
+        } else if (ngoaiMang >= 50) {
+            soTienNgoaiMang = ngoaiMang * 1100;
+        }
+        if (quocTe > 0 && quocTe < 10) {
+            soTienQuocTe = quocTe * 25000;
+        } else if (quocTe >= 10) {
+            soTienQuocTe = quocTe * 20000;
+        }
+        document.getElementById('show').innerHTML = "Số tiền nội mạng phải trả: " + soTienNoiMang + " VNĐ"
+            + "<br> Số tiền ngoại mạng phải trả: " + soTienNgoaiMang+ " VNĐ"
+            + "<br> Số tiền quốc tế phải trả: " + soTienQuocTe+ " VNĐ"
+            + "<br> Tổng số tiền phải trả: " + (soTienNoiMang + soTienNgoaiMang + soTienQuocTe)+ " VNĐ";
+
+    }
 </script>
 </body>
 </html>

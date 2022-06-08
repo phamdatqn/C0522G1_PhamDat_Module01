@@ -11,8 +11,8 @@
         <th colspan="2">Nhập số thứ 2:</th>
     </tr>
     <tr>
-        <td colspan="2"><input type="number" id="soThuNhat"></td>
-        <td colspan="2"><input type="number" id="soThuHai"></td>
+        <td colspan="2"><input type="number" id="firstOperand"></td>
+        <td colspan="2"><input type="number" id="secondOperand"></td>
     </tr>
     <tr>
         <td>
@@ -36,20 +36,20 @@
 
 <script>
     function phepTinh(tinh) {
-        let soThuNhat = parseInt(document.getElementById('soThuNhat').value);
-        let soThuHai = parseInt(document.getElementById('soThuHai').value);
+        let firstOperand = parseInt(document.getElementById('firstOperand').value);
+        let secondOperand = parseInt(document.getElementById('secondOperand').value);
         if (tinh === "*") {
-            let result = soThuNhat * soThuHai
-            document.getElementById('show').value = soThuNhat + ' * ' + soThuHai + ' = ' + result;
+            let result = firstOperand * secondOperand
+            document.getElementById('show').value = firstOperand + ' * ' + secondOperand + ' = ' + result;
         }else if (tinh==="/"){
-            let result=soThuNhat/soThuHai
-            document.getElementById('show').value = soThuNhat + ' / ' + soThuHai + ' = ' + result;
+            let result=firstOperand/secondOperand
+            document.getElementById('show').value = firstOperand + ' / ' + secondOperand + ' = ' + result;
         }else if (tinh==="+"){
-            let result=soThuNhat+soThuHai
-            document.getElementById('show').value = soThuNhat + ' + ' + soThuHai + ' = ' + result;
+            let result=firstOperand+secondOperand
+            document.getElementById('show').value = firstOperand + ' + ' + secondOperand + ' = ' + result;
         }else {
-            let result=soThuNhat-soThuHai
-            document.getElementById('show').value = soThuNhat + ' - ' + soThuHai + ' = ' + result;
+            let result=firstOperand-secondOperand
+            document.getElementById('show').value = firstOperand + ' - ' + secondOperand + ' = ' + result;
         }
     }
 </script>

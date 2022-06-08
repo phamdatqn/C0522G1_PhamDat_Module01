@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhập tiền lương tháng này:</label>
+<input id="inputSalary" type="number"><br>
+<input onclick="check()" type="button" value="Tính Thuế"><br>
+<span id="show"></span>
+<script>
+    function check() {
+        let salary = parseFloat(document.getElementById('inputSalary').value);
+        let taxMoney;
+        if (salary <= 5000000) {
+            taxMoney = salary * 0.05;
+            document.getElementById('show').innerText = "Tiền thuế phải nộp là 5%: bằng "  + taxMoney +" VNĐ";
+        } else if (salary <= 10000000) {
+            taxMoney = salary * 0.1;
+            document.getElementById('show').innerText = "Tiền thuế phải nộp là 10%: bằng" + taxMoney+" VNĐ";
+        } else if (salary <= 18000000) {
+            taxMoney = salary * 0.15;
+            document.getElementById('show').innerText = "Tiền thuế phải nộp là 15%: bằng" + taxMoney+" VNĐ";
+        } else if (salary <= 32000000) {
+            taxMoney = salary * 0.2;
+            document.getElementById('show').innerText = "Tiền thuế phải nộp là 20%: bằng" + taxMoney+" VNĐ";
+        } else if (salary <= 52000000) {
+            taxMoney = salary * 0.25;
+            document.getElementById('show').innerText = "Tiền thuế phải nộp là 25%: bằng" + taxMoney+" VNĐ";
+        } else if (salary <= 80000000) {
+            taxMoney = salary * 0.3;
+            document.getElementById('show').innerText = "Tiền thuế phải nộp là 30%: bằng" + taxMoney+" VNĐ";
+        } else {
+            taxMoney = salary * 0.35;
+            document.getElementById('show').innerText = "Tiền thuế phải nộp là 35%: bằng " + taxMoney+" VNĐ";
+        }
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="show1"></p>
+<p id="show2"></p>
+<script>
+    let a = parseInt(prompt('Nhập a: '));
+    let b = parseInt(prompt('Nhập b: '));
+    let c = parseInt(prompt('Nhập c: '));
+    if (a == 0) {
+        if (b == 0) {
+            if (c == 0) {
+                document.getElementById('show1').innerHTML = "Phương trình có vô số nghiệm ."
+            } else {
+                document.getElementById('show1').innerHTML = "Phương trình vô nghiệm ."
+            }
+        } else {
+            document.getElementById('show1').innerHTML = "Phương trình có 1 nghiệm duy nhất x = " + (-c / b);
+        }
+    }
+    else {
+        delta=b*b-4*a*c;
+        if (delta<0){
+            document.getElementById('show1').innerHTML="Phương trình vô nghiệm"
+        }else if (delta==0){
+            document.getElementById('show1').innerHTML="Phương trình có nghiệm kép x1 = x2 = "+-(b/2*a);
+        }else if (delta>0){
+            document.getElementById('show1').innerHTML="Phương trình có 2 nghiệm phân biệt x1 = "+(-b+Math.sqrt(delta))/(2*a);
+            document.getElementById('show2').innerHTML="x2 = "+(-b-Math.sqrt(delta))/(2*a);
+        }
+    }
+</script>
+</body>
+</html>

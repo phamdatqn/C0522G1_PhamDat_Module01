@@ -12,7 +12,7 @@
         <th>To Currency</th>
     </tr>
     <tr>
-        <td colspan="2"><input id="inputTien" type="number"></td>
+        <td colspan="2"><input id="inputMoney" type="number"></td>
         <td>
             <select id="from">
                 <option value="VND">VND</option>
@@ -45,19 +45,19 @@
 <script>
     function thanhTien() {
 
-        var soTien = document.getElementById('inputTien').value;
-        var tienCanDoi=soTien;
-        var tien1 = document.getElementById('from').value;
-        var tien2 = document.getElementById('to').value;
-        if (tien1 !== tien2){
-            if (tien1 === "VND"){
-                soTien = soTien / 23000;
+        var money = document.getElementById('inputMoney').value;
+        var fromMoney = document.getElementById('from').value;
+        var toMoney = document.getElementById('to').value;
+        var moneyChange = money;
+        if (fromMoney !== toMoney) {
+            if (fromMoney == "VND") {
+                money = money / 23000;
             }
-             if(tien1 === "USD"){
-                soTien = soTien * 23000;
-             }
+            if (fromMoney == "USD") {
+                money = money * 23000;
+            }
         }
-        document.getElementById('show').innerHTML = tienCanDoi+' '+ tien1 +' = '+ soTien + ' '+ tien2 ;
+        document.getElementById('show').innerHTML = moneyChange + ' ' + fromMoney + ' = ' + money + ' ' + toMoney;
     }
 
 </script>

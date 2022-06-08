@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Số điện tháng trước: </label>
+<input id="beforeNumber" type="number"><br>
+<label>Số điện tháng này: </label>
+<input id="afterNumber" type="number"><br>
+<button onclick="check()" type="button"> Tính</button>
+<br>
+<span id="show"></span>
+</body>
+<script>
+    function check() {
+        let beforeNumber = parseFloat(document.getElementById('beforeNumber').value);
+        let afterNumber = parseFloat(document.getElementById('afterNumber').value);
+        let soDien = afterNumber - beforeNumber;
+        let money;
+        if (afterNumber < beforeNumber) {
+            document.getElementById('show').innerText = "Nhập sai, số điện tháng này phải lớn hơn tháng trước";
+        } else {
+            if (soDien <= 50) {
+                money = soDien * 1500;
+                document.getElementById('show').innerText = "Bạn dùng tiết kiệm dưới 50 số trong tháng này, tổng tiền trả là: " + money + ' VNĐ';
+            } else {
+                money = soDien * 1700;
+                document.getElementById('show').innerText = "Bạn dùng quá quy định sẽ bị phạt 1.700VND/ ký, tổng tiền phải trả là: " + money + ' VNĐ;'
+            }
+        }
+        }
+</script>
+</html>

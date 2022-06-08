@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhập cạnh a: </label>
+<input id="edgeA" type="number"><br>
+<label>Nhập cạnh b: </label>
+<input id="edgeB" type="number"><br>
+<label>Nhập cạnh c: </label>
+<input id="edgeC" type="number"><br>
+<button type="button" onclick="check()">Kiểm Tra</button>
+<br>
+<span id="show"></span>
+</body>
+<script>
+    function check() {
+        let a = parseInt(document.getElementById('edgeA').value);
+        let b = parseInt(document.getElementById('edgeB').value);
+        let c = parseInt(document.getElementById('edgeC').value);
+        if (a > 0 && b > 0 && c > 0) {
+            if (a + b > c && b + c > a && a + c > b) {
+                document.getElementById('show').innerHTML = a + " " + b + " " + c + " là ba cạnh của tam giác";
+            } else {
+                document.getElementById('show').innerHTML = a + " " + b + " " + c + " không phải là ba cạnh của tam giác ";
+            }
+        }else {
+            document.getElementById('show').innerHTML = a + " " + b + " " + c + " không phải là ba cạnh của tam giác ";
+        }
+        }
+
+</script>
+</html>
