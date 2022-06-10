@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="show"></p>
+<script>
+    let sum=0;
+    let number=parseInt(prompt('Nhập 1 số: '));
+    while (number != -1){
+        sum=sum+number;
+        number=parseInt(prompt('Nhập 1 số: '));
+    }
+    document.getElementById('show').innerHTML=sum;
+</script>
+</body>
+</html>

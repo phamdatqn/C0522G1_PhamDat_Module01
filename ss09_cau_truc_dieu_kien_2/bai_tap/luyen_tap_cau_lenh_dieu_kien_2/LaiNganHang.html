@@ -35,7 +35,7 @@
         let month = parseFloat(document.getElementById('inputMonth').value);
         let interestRateSelect = parseFloat(document.getElementById('select').value);
         let amount = money *Math.pow(( 1 + interestRateSelect),month);
-        let interest=amount-money;
+        let interest=Math.floor(amount-money);
         document.getElementById('show').innerHTML="Lãi xuất "+month+ " là: "+interest;
     }
 </script>

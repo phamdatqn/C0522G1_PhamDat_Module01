@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //     let nhietDo;
+    //     nhietDo=prompt('Nhập nhiệt độ: ');
+    //     while (nhietDo<20 || nhietDo>100) {
+    //     if (nhietDo<20){
+    //         alert("cần tăng thêm nhiệt độ");
+    //     }else {
+    //         alert("Cần giảm nhiệt độ");
+    //     }
+    //         nhietDo=prompt('Nhập nhiệt độ: ');
+    // }
+    let nhietDo;
+    do {
+        nhietDo=prompt('Nhập nhiệt độ : ');
+        if (nhietDo<20){
+            alert("tăng nhiệt độ");
+        }else if (nhietDo>100){
+            alert('Cần giảm nhiệt độ');
+        }
+    }while (nhietDo<20 || nhietDo>100);
+    alert('Nhiệt độ oke')
+
+</script>
+</body>
+</html>

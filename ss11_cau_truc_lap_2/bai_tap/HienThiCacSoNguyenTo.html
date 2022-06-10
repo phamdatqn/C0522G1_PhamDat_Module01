@@ -2,21 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>C0522G1-PhamDat</title>
 </head>
 <body>
 <script>
-    let soLuongSoNguyenTo = prompt("nhập vào số lượng SNT cần in ra")
-    let dem = 0; // đếm số lượng SNT
-    let n = 2; // khai báo biến N để kiểm xem n có phải là số nguyên tố hay không
+    let soLuongSoNguyenTo = (prompt('Nhập số nguyên tố cần lấy: '));
+    let dem = 0;
+    let n = 2;
     let show = "";
     while (dem < soLuongSoNguyenTo) {
-        let kiemTra = true; // biến cờ giả định để đánh dấu mặc định n là SNT.
+        let kiemTra = true;
         if (n < 2) {
             kiemTra = false;
         } else {
             for (let i = 2; i <= Math.sqrt(n); i++) {
-                if (n % i === 0) {
+                if (n % i == 0) {
                     kiemTra = false;
                     break;
                 }
@@ -24,12 +24,12 @@
         }
         if (kiemTra) {
             dem++;
-            show += "<br>" + n;
+            show =show+ "<br>" + n;
         }
         n++;
     }
-    document.write("Dãy số nguyên tô: " + show);
 
+    document.write('Dãy số Nguyên tố là: ' + show);
 </script>
 </body>
 </html>

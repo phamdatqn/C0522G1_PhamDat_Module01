@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="batDau()">Bắt đầu</button>
+<script>
+    function batDau(){
+        let number = parseInt(prompt('Số bạn đoán trong khoảng lớn nhất là bao nhiêu? '));
+        let numberRandom = Math.floor(Math.random() * number);
+        let numberCheck = parseInt(prompt('Nhập số bạn đoán: '));
+        let count = 1;
+        while (numberCheck != numberRandom) {
+            if (count == 4) {
+                alert('Bạn đã hết 4 lần dự đoán');
+                break;
+            } else if (numberCheck < numberRandom) {
+                alert('Số bạn đoán nhỏ hơn');
+            } else if (numberCheck > numberRandom) {
+                alert('Số bạn đoán lớn hơn');
+            }
+            numberCheck = prompt('Nhập số bạn đoán: ');
+            count++;
+        }
+        if (numberCheck==numberRandom){
+            alert('Bạn dự đoán đúng')
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputNumber = parseInt(prompt('Nhập số lượng dãy Fibonacci cần in ra: '));
+    let show = "";
+    let a1 = 0, a2 = 1, a3;
+    for (let i = 1; i < inputNumber; i++) {
+        a3 = a1 + a2;
+        a1 = a2;
+        a2 = a3;
+        show = show + "<br>" + a3;
+    }
+    document.write('Dãy số Fibonacci là: ' + "<br> 1" + show);
+</script>
+</body>
+</html>

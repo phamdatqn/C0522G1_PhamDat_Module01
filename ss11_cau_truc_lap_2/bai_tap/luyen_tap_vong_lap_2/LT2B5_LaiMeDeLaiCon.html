@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><label> Nhập số tiền vay: </label></td>
+        <td><input id="inputNumber" type="number"></td>
+    </tr>
+    <tr>
+        <td><label> Chọn lãi xuất: </label></td>
+        <td>
+            <select id="select">
+                <option value="0.01">1%</option>
+                <option value="0.02">2%</option>
+                <option value="0.03">3%</option>
+                <option value="0.04">4%</option>
+                <option value="0.05">5%</option>
+                <option value="0.06">6%</option>
+                <option value="0.07">7%</option>
+                <option value="0.08">8%</option>
+                <option value="0.09">9%</option>
+                <option value="0.1">10%</option>
+            </select>
+        </td>
+    </tr>
+
+    <tr>
+        <td><label> Nhập số tháng vay: </label></td>
+        <td><input id="inputMonth" type="number"></td>
+    </tr>
+</table>
+<button type="button" onclick="check()">Tính Lãi</button>
+<br>
+<span id="show1"></span>
+<span id="show2"></span>
+<script>
+    // lãi suất mẹ đẻ lãi suất còn.
+    //Vd: tongTinGui =100; lãi suất 10% /thang; gửi 2 tháng
+    // +t1: lai =100*0.1 =10 => tongTien = 110
+    // +t2 : lai =110*0.1 =>11 => tong tien 121;
+    function check() {
+        let inputNumber = parseInt(document.getElementById('inputNumber').value);
+        let inputInterest = parseFloat(document.getElementById('select').value);
+        let inputMonth = parseInt(document.getElementById('inputMonth').value);
+        let interrest = 0;
+        for (let i = 1; i <= inputMonth; i++) {
+            interrest += inputNumber * inputInterest;
+            inputNumber += inputNumber * inputInterest;
+        }
+        document.getElementById('show1').innerHTML = "Tiền lãi là: " + Math.floor(interrest) + " VNĐ" + "<br>";
+        document.getElementById('show2').innerHTML = "Tổng tiền phải trả là : " + Math.floor(inputNumber) + " VNĐ";
+    }
+</script>
+</body>
+</html>

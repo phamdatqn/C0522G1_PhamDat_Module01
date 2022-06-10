@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi ngân hàng</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>Số tiền vay</th>
+        <th>
+            <input type="number" id="moneyPay">
+        </th>
+    </tr>
+    <tr>
+        <th> Số tháng vay
+        <td>
+            <select id="month">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10 </option>
+                <option>11 </option>
+                <option>12 </option>
+            </select>
+        </td>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <button onclick="count()">Tính tiền</button>
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <span>Số tiền phải trả</span>
+        </td>
+        <td>
+            <span id="result"></span>
+        </td>
+    </tr>
+</table>
+<script>
+    function count(){
+        let moneyPay = parseInt(document.getElementById("moneyPay").value);
+        let month = document.getElementById("month").value;
+        switch(month){
+            case "1": document.getElementById("result").innerHTML= moneyPay / 100 + moneyPay +"";
+                break;
+            case "2": document.getElementById("result").innerHTML= moneyPay * 2 / 100 + moneyPay+"";
+                break;
+            case "3": document.getElementById("result").innerHTML= moneyPay * 3 / 100 + moneyPay+"";
+                break;
+            case "4": document.getElementById("result").innerHTML= moneyPay * (4 / 100) + moneyPay+"";
+                break;
+            case "5": document.getElementById("result").innerHTML= moneyPay * (5 / 100) + moneyPay+"";
+                break;
+            case "6": document.getElementById("result").innerHTML= moneyPay * (6 / 100) + moneyPay+"";
+                break;
+            case "7": document.getElementById("result").innerHTML= moneyPay * (7 / 100) + moneyPay+"";
+                break;
+            case "8": document.getElementById("result").innerHTML= moneyPay * (8 / 100) + moneyPay+"";
+                break;
+            case "9": document.getElementById("result").innerHTML= moneyPay * (9 / 100) + moneyPay+"";
+                break;
+            case "10": document.getElementById("result").innerHTML= moneyPay * (10 / 100) + moneyPay+"";
+                break;
+            case "11": document.getElementById("result").innerHTML= moneyPay * (11 / 100) + moneyPay+"";
+                break;
+            case "12": document.getElementById("result").innerHTML= moneyPay * (12 / 100) + moneyPay+"";
+                break;
+        }
+    }
+
+</script>
+
+</body>
+</html>

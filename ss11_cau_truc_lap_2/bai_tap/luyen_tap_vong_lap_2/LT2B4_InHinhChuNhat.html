@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let weight=parseInt(prompt("Nhập chiều dài : "));
+    let height=parseInt(prompt("Nhập chiều rộng : "));
+    for (let i = 1; i <= weight; i++){
+        for (let j = 1; j <= height; j++){
+            if (i==1 || i==weight || j == 1 || j==height){
+                document.write("*");
+            }else {
+                document.write("&ensp;");
+            }
+        }document.write("<br>");
+    }
+</script>
+</body>
+</html>

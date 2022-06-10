@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a1 = 0;a2 = 1;a3 =0;
+    //let show = "<br> 1";
+    for (i = 1; i < 20; i++) {
+        a3 = a1 + a2;
+        a1 = a2;
+        a2 = a3;
+        if (a3%5==0){
+            break;
+        }
+    }
+    document.write(" số đầu tiên trong dãy số Fibonacci chia hết cho 5 là: " + a3);
+</script>
+</body>
+</html>

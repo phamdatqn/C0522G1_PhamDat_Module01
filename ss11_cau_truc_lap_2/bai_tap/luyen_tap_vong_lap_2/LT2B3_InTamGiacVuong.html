@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    document.write("Tam giác vuông góc trái dưới <br> <br>");
+    let show = "";
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= i; j++) {
+            show = show + "*";
+        }
+        show = show + "<br>";
+    }
+    document.write(show);
+
+
+    document.write(" <br><br><br>Tam giác vuông góc trái trên <br> <br>");
+    for (let i = 5; i >= 1; i--) {
+        for (let j = 0; j < i; j++) {
+            document.write("*");
+        }
+        document.write("<br>")
+    }
+
+
+    document.write(" <br><br><br>Tam giác vuông góc phải dưới <br> <br>");
+    let show3 = "";
+    for (let i = 0; i < 5; i++) {
+        for (let k = 4; k > i; k--) {
+            show3 += "&ensp;"
+        }
+        for (let j = 0; j < i + 1; j++) {
+
+            show3 += "*";
+        }
+        show3 += "<br>";
+    }
+    document.write(show3);
+
+
+    document.write(" <br><br><br>Tam giác vuông góc phải trên <br> <br>");
+    let show4 = "";
+    for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < i; j++) {
+            show4 += "&ensp;";
+        }
+        for (let k = 5 - i; k > 0; k--) {
+            show4 += "*";
+        }
+    show4 += "<br>";
+    }
+    document.write(show4);
+
+
+</script>
+</body>
+</html>
