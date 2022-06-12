@@ -1,0 +1,31 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="inputArray" type="text">
+<button onclick="addArray()" type="button"> Add</button>
+<button onclick="showArray()" type="button">Display</button>
+<span id="show"></span>
+<script>
+    let x=0
+    let array=Array();
+    function addArray() {
+        array[x]=document.getElementById('inputArray').value;
+        alert('Dữ liệu: '+array[x]+ " đã được thêm vào mảng, ở vị trí "+x+" trong mảng" )
+        x++;
+        document.getElementById('inputArray').value="";
+
+    }
+    let e="<hr/>"
+    function showArray() {
+        for (let i=0;i<array.length;i++){
+            e+="Element "+i+" = "+array[i]+"<br/>";
+        }
+        document.getElementById("show").innerHTML = e;
+    }
+</script>
+</body>
+</html>

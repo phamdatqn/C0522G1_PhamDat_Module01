@@ -2,34 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Hiển thị n sô nguyên tố đầu tiên</title>
 </head>
 <body>
 <script>
-    let soLuongSoNguyenTo = prompt("nhập vào số lượng SNT cần in ra")
-    let dem = 0; // đếm số lượng SNT
-    let n = 2; // khai báo biến N để kiểm xem n có phải là số nguyên tố hay không
-    let show = "";
-    while (dem < soLuongSoNguyenTo) {
-        let kiemTra = true; // biến cờ giả định để đánh dấu mặc định n là SNT.
-        if (n < 2) {
-            kiemTra = false;
-        } else {
-            for (let i = 2; i <= Math.sqrt(n); i++) {
-                if (n % i === 0) {
-                    kiemTra = false;
-                    break;
+    let number = parseInt(prompt("Nhập n số nguyên tố đầu tiên: "));
+    let countPrime = 0;
+    let countDivisor = 0;
+    for (let i=2; i<10000; i++) {
+        if (countPrime<number) {
+            for (let j=1; j<=i; j++) {
+                if (i%j==0) {
+                    countDivisor += 1;
                 }
             }
+            if (countDivisor==2) {
+                document.write(i + " (số thứ " + (countPrime+1) + ")" + "<br>");
+                countPrime += 1;
+            }
+            countDivisor = 0;
         }
-        if (kiemTra) {
-            dem++;
-            show += "<br>" + n;
+        else {
+            break;
         }
-        n++;
     }
-    document.write("Dãy số nguyên tô: " + show);
-
 </script>
 </body>
-</html>

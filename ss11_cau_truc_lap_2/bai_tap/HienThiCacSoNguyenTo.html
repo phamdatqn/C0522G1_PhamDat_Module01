@@ -11,7 +11,7 @@
     let n = 2;
     let show = "";
     while (dem < soLuongSoNguyenTo) {
-        let kiemTra = true;
+        let kiemTra = true; // biến cờ giả định để đánh dấu mặc định n là SNT.
         if (n < 2) {
             kiemTra = false;
         } else {
@@ -24,11 +24,10 @@
         }
         if (kiemTra) {
             dem++;
-            show =show+ "<br>" + n;
+            show =show+ "<br>" + " số thứ "+dem+ " là : " +n ;
         }
         n++;
     }
-
     document.write('Dãy số Nguyên tố là: ' + show);
 </script>
 </body>
