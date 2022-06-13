@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<!--Viết một chương trình nhận một số nhập vào và chèn dấu (-) giữa 2  số chẵn.
+Ví dụ nếu bạn nhập vào 025468 thì kết quả của chương trình sẽ là 0-254-6-8.8 -->
+<script>
+        let numbers=prompt('Nhập số: ');
+        let str=numbers.toString();
+        let result=[str[0]];
+        for (let i=0;i<str.length;i++){
+            if(str[i]%2===0 && str[i+1]%2===0){
+                result.push('-',str[i+1]);
+            }else{
+                result.push(str[i+1]);
+            }
+        } document.write(result.join(' '));
+
+        // var num=prompt();
+        // var str = num.toString();
+        // var result = [str[0]];
+        //
+        // for(var x=1; x<str.length; x++)
+        // {
+        //     if((str[x-1]%2 === 0)&&(str[x]%2 === 0))
+        //     {
+        //         result.push('-', str[x]);
+        //     }
+        //     else
+        //     {
+        //         result.push(str[x]);
+        //     }
+        // }
+        // document.write(result);
+</script>
+</body>
+</html>

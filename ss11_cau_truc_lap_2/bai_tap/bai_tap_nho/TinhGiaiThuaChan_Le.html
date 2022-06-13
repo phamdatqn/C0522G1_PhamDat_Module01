@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = parseFloat(prompt('Nhập số: '));
+    let giaiThuaChan;
+    let giaiThuaLe;
+ //   for (let i = 1; i <= number; i++) {
+        giaiThuaChan = 1;
+        giaiThuaLe = 1;
+        if (number % 2 !== 0) {
+            for (let j = 1; j <= number; j=j+2) {
+                giaiThuaLe = giaiThuaLe * j;
+            }
+            document.write('giai thừa lẻ của '+number+ " là "+giaiThuaLe);
+        } else {
+            for (let k = 2; k <= number; k=k+2) {
+                giaiThuaChan = giaiThuaChan * k;
+            }
+            document.write('giai thừa chẵn của '+number+ " là "+giaiThuaChan);
+
+        }
+</script>
+</body>
+</html>

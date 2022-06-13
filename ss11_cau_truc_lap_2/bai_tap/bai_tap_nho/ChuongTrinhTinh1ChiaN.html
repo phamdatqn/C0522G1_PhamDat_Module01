@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number=parseFloat(prompt('Nhập số n: '));
+    let sum=15;
+    for (let i=1;i<=number;i++){
+        let giaiThua=1;
+        for (let j=1;j<=i;j++){
+            giaiThua=giaiThua*j;
+        }
+        sum=sum+(Math.pow(-1,i)/giaiThua);
+    }
+    document.write(sum);
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number=(prompt('Nhập 1 số nguyên dương: '));
+    let numberNew=parseFloat(number);
+    let tong=0;
+    let tich=1;
+    while (numberNew>0){
+        tong=tong+(numberNew%10);
+        tich=tich*(numberNew%10);
+        numberNew=Math.floor(numberNew/10);
+    }
+    document.write("số "+number+"<br> có Tổng là: "+tong+"<br>");
+    document.write('Tích là: '+tich);
+</script>
+</body>
+</html>
