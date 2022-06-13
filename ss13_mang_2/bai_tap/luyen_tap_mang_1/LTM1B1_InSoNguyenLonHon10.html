@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    let i;
+    let dem=0;
+    let arrs=Array();
+    for (i=0;i<10;i++){
+        arrs[i]=parseInt(prompt('Nhập số: '));
+    }
+    for (i=0;i<arrs.length;i++){
+        if (arrs[i]>10){
+            dem++;
+        }
+    }
+    document.write("mãng đã nhập: "+arrs.join(" "));
+    document.write('<br> Có '+dem+ " số lớn hơn 10");
+</script>
+</html>

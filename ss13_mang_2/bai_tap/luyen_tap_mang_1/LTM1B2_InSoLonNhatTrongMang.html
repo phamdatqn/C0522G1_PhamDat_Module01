@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let i;
+    let viTri;
+    let max;
+    let arrs = Array();
+    for (i = 0; i < 10; i++) {
+        arrs[i] = parseInt(prompt('Nhập số: '));
+    }
+    max = arrs[0];
+    for (i = 1; i < arrs.length; i++) {
+        if (arrs[i] > max) {
+            max = arrs[i];
+            viTri = i;
+        }
+    }
+    document.write("mãng đã nhập: " + arrs.join(" "));
+    document.write('<br> số lớn nhất trong mảng là: ' + max + " ở vị trí " + viTri);
+</script>
+</body>
+</html>

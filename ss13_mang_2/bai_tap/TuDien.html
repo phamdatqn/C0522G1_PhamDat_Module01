@@ -5,6 +5,20 @@
     <title>Title</title>
 </head>
 <body>
-
+<script>
+    let eng = ["hello", "currency", "begin", "because", "selfish", "my best", "you", "people", "everything"];
+    let vn = ["xin chào", "Tiền tệ", "Bắt đầu", "Bởi vì", "ích kỷ", "Tốt nhất của tôi", "Bạn", "Nhiều người", "Mọi điều"]
+    let strg = prompt('Nhập từ cần tìm: ');
+    let i;
+    for (i = 0; i < eng.length; i++) {
+        if (strg == eng[i]) {
+            document.write(vn[i]);
+            break;
+        }
+    }
+    if (i == eng.length) {
+        alert("Không tìm thấy");
+    }
+</script>
 </body>
 </html>

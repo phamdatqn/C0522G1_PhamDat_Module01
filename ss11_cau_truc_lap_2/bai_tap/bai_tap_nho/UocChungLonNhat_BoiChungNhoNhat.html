@@ -6,7 +6,38 @@
 </head>
 <body>
 <script>
-    let a=
+    // // cach 1:Ước chung lớn nhất
+    // let numberA = parseInt(prompt('Nhập a: '));
+    // let numberB = parseInt(prompt('Nhập b: '));
+    // let i;
+    // let uocChungLonNhat;
+    // for (i = 1; i < numberA && i < numberB; i++) {
+    //     if (numberA % i === 0 && numberB % i === 0) {
+    //         UCLN = i;
+    //     }
+    // }
+    // document.write('Ước chung lớn nhất của ' + numberA + " và " + numberB + " là: " + uocChungLonNhat);
+    //
+    // //Bội chung nhỏ nhất
+    // document.write('<br> Bội chung nhỏ nhất là: '+ (numberA*numberB)/uocChungLonNhat);
+
+
+    //cach 2:
+
+    let a = parseInt(prompt('Nhập a: '));
+    let inputA=a;
+    let b = parseInt(prompt('Nhập b: '));
+    let inputB=b;
+    let uocChungLonNhat;
+    while (a!=b){
+        if (a>b){
+            a=a-b;
+        }else {
+            b=b-a;
+        }
+    }uocChungLonNhat=a;
+    document.write("Ước chung lớn nhất là: "+uocChungLonNhat+"<br>");
+    document.write('Bội chung nhỏ nhất là: '+(inputA*inputB)/uocChungLonNhat);
 </script>
 </body>
 </html>
