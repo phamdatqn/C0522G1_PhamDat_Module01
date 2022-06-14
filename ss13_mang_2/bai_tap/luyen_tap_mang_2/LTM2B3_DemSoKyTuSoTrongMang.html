@@ -6,9 +6,16 @@
 </head>
 <body>
 <script>
-    let arr=new Array();
-    for (let i=0;i<5;i++){
-        arr[i]=prompt('Nhập phần tử của Array:');
+    // Viết một chương trình khai báo một mảng ký tự và kích thước của mảng. Chương trình này đếm số ký tự số trong mảng.
+    let str = (prompt('Nhập '));
+    let arr = new Array();
+    for (let i = 0; i < str.length; i++)
+        arr[i] = str[i];
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] >= 0) {
+            count++;
+        }
     }
 
 </script>
