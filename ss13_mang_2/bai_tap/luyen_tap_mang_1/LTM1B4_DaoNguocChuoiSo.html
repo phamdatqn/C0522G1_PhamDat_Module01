@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrs = [];
+    let first = 0;
+    for (let i = 0; i < 10; i++) {
+        arrs[i] = (prompt('Nhập số của chuỗi: '));
+    }
+    let last = arrs.length - 1;
+    while (first < last) {
+        let b = arrs[first];
+        arrs[first] = arrs[last];
+        arrs[last] = b;
+        first++;
+        last--;
+    }
+    document.write(arrs);
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrs=[];
+    let count=0;
+    let soAm="";
+    for (let i = 0; i < 6; i++) {
+        arrs[i] = parseFloat(prompt('Nhập số của chuỗi: '));
+    }
+    for (let i=0;i<arrs.length;i++){
+        if (arrs[i]<0){
+            count++;
+            soAm+=arrs[i]+' ';
+        }
+    }
+    document.write('Số âm trong chuỗi có :'+count+"<br> số âm là: "+soAm);
+</script>
+</body>
+</html>

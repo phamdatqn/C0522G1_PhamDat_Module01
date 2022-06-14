@@ -6,25 +6,10 @@
 </head>
 <body>
 <script>
-    let number = parseInt(prompt("Nhập n số nguyên tố đầu tiên: "));
-    let countPrime = 0;
-    let countDivisor = 0;
-    for (let i=2; i<10000; i++) {
-        if (countPrime<number) {
-            for (let j=1; j<=i; j++) {
-                if (i%j==0) {
-                    countDivisor += 1;
-                }
-            }
-            if (countDivisor==2) {
-                document.write(i + " (số thứ " + (countPrime+1) + ")" + "<br>");
-                countPrime += 1;
-            }
-            countDivisor = 0;
-        }
-        else {
-            break;
-        }
-    }
+    const randoms = [4,6,78,2,34,8,90,34,23,23,5,6,234,435];
+    let odds = randoms.filter(number => number % 2 != 0);
+    console.log(odds);
+    let oddss=randoms.filter(number => number%2==0);
+    console.log(oddss);
 </script>
 </body>

@@ -6,27 +6,50 @@
 </head>
 <body>
 <script>
-    let str = prompt('Nhập chuỗi: ');
-    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    let LOWER = 'abcdefghijklmnopqrstuvwxyz';
-    let result = [];
+    //cách 1:
+    //   let str = prompt('Nhập chuỗi: ');
+    //   let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    //   let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    //   let result = [];
+    //
+    //   for(let x=0; x<str.length; x++)
+    //   {
+    //       if(UPPER.includes(str[x]))
+    //       {
+    //           result.push(str[x].toLowerCase());
+    //       }
+    //       else if(LOWER.includes(str[x]))
+    //       {
+    //           result.push(str[x].toUpperCase());
+    //       }
+    //       else
+    //       {
+    //           result.push(str[x]);
+    //       }
+    //   }
+    // document.write(result.join(''));
 
-    for(let x=0; x<str.length; x++)
-    {
-        if(UPPER.includes(str[x]))
-        {
-            result.push(str[x].toLowerCase());
-        }
-        else if(LOWER.includes(str[x]))
-        {
-            result.push(str[x].toUpperCase());
-        }
-        else
-        {
-            result.push(str[x]);
+
+    //cách 2:
+    let arr=new Array();
+    let str = prompt('Nhập chuỗi: ');
+    let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let lower = 'abcdefghijklmnopqrstuvwxyz';
+
+    for (let i =0;i<str.length;i++){
+        arr[i]=str[i];
+    }
+    for (let i=0;i<arr.length;i++){
+        for (let j=0;j<upper.length;j++){
+            if (arr[i]===upper[j]){
+                arr[i]=lower[j];
+            }
+            else if (arr[i]===lower[j]){
+                arr[i]=upper[j];
+            }
         }
     }
-  document.write(result.join(''));
+    document.write(arr.join(' '));
 </script>
 </body>
 </html>

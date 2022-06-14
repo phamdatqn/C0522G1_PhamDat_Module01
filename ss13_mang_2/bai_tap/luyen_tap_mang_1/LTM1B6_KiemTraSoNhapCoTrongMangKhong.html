@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrs=[];
+    for (let i=0;i<10;i++){
+        arrs[i]=parseFloat(prompt('Nhập phần tử của mảng: '));
+    }
+    let number=parseFloat(prompt('Nhập số để kiểm tra: '));
+    for (let i=0;i<arrs.length;i++){
+        let viTri;
+        if (number==arrs[i]){
+            viTri=i;
+            alert('Số '+number+' có trong mảng ở vị trí sô '+ viTri);
+        }
+        if (number!=arrs[i]){
+            alert('Không tìm thấy số '+number+" trong mảng");
+            break;
+        }
+        }
+
+
+</script>
+</body>
+</html>
