@@ -6,18 +6,31 @@
 </head>
 <body>
 <script>
-    let arrs=[];
-    for (let i=0;i<10;i++){
-        arrs[i]=parseFloat(prompt('Nhập phần tử của mảng: '));
+    let arr = [];
+    for (let i = 0; i < 10; i++) {
+        arr[i] = parseFloat(prompt('Nhập phần tử của mảng: '));
     }
-    let number=parseFloat(prompt('Nhập số để xóa: '));
-    for (let i=0;i<arrs.length;i++){
-        if (number==arrs[i]){
-            arrs.splice(i,1);
-            arrs.push('0');
+    let number = parseFloat(prompt('Nhập số để xóa: '));
+    /*Tìm V có trong mảng không */
+    let index = true;
+    for (let i = 0; i < arr.length; i++) {
+        if (number === arr[i]) {
+            index = i;
         }
     }
-    document.write(arrs);
+    if (index) {
+        /*Xóa nếu v tồn tại*/
+        for (let i = index; i < arr.length - 1; i++) {
+            arr[i] = arr[i + 1];
+        }
+        //gán 0 cho phần tử cuối
+        arr[arr.length - 1] = 0;
+        document.write(arr);
+    } else {
+        /*Ko có V trong mảng*/
+        alert("Không có : " + number+" trong mảng");
+    }
+
 </script>
 </body>
 </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // a. In ra chuỗi đảo ngược của chuỗi đã cho
+    // b. Đổi chuổi đã cho sang chữ hoa
+    // c. Đổi chuỗi đã cho sang chữ thường
+    // d. Đổi chuỗi đã cho sang vừa chữ hoa vừa chữ thường (các ký tự chữ hoa thì thành chữ
+    let str=prompt('Nhập 1 chuỗi:');
+    let arr=new Array();
+    for (let i=0;i<str.length;i++){
+        arr[i]=str[i];
+    }
+    let first=0;
+    let last=arr.length-1;
+    while (first<last){
+        let b=arr[first];
+        arr[first]=arr[last];
+        arr[last]=b;
+        first++;
+        last--;
+    }
+    document.write(arr);
+
+    // b. Đổi chuỗi đã cho sang chữ hoa
+    let str=prompt('Nhập 1 chuỗi:');
+</script>
+</body>
+</html>

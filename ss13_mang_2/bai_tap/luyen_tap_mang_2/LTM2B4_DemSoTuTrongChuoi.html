@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //đếm ký tự chữ trong mảng.
+    //    let str = prompt('Nhập 1 chuỗi: ');
+    //    let arr = new Array();
+    //   // let kyTuSO;
+    //    let count = 0;
+    //    for (let i = 0;i< str.length; i++) {
+    //        arr[i] = str[i];
+    //    }
+    //    for (let i = 0; i < arr.length; i++) {
+    //        if (arr[i] >= 0) {
+    //            continue;
+    //        }
+    //        count++;
+    //    }
+    // document.write('Có '+count+" ký tự trong chuỗi");
+
+    //đếm ký đếm số từ trong 1 chuỗi nhập nhiều ký tự trắng( sai chính tả).
+    // let str = prompt('Nhập 1 chuỗi: ');
+    // let count=0;
+    // str=str+" ";
+    // for (let i=1;i<str.length;i++){
+    //     if (str[i] === " " && str[i - 1] !== " ") {
+    //         count++;
+    //     }
+    // }
+    // alert('Số từ trong chuỗi là: ' + count);
+
+
+    //Đếm số từ trong 1 chuỗi .
+    let str = prompt('Nhập 1 chuỗi: ');
+    let count=0;
+    for (let i=1;i<str.length;i++){
+        if (str[i] === " ") {
+            count++;
+        }
+    }
+    alert('Số từ của chuỗi là: '+count);
+
+</script>
+</body>
+</html>
