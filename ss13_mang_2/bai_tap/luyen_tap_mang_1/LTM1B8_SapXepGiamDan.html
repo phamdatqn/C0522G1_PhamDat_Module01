@@ -12,15 +12,14 @@
     for (let i=0;i<10;i++){
         arr[i]=parseFloat(prompt('Nhập phần tử của mảng'));
     }
-    let gd;
-    [1.2,3,4]
+    let giamDan;
     for(let i = 0; i < arr.length-1; i++){
         for(let j = i + 1; j < arr.length; j++){
             if(arr[i] < arr[j]){
                 // Hoan vi 2 so arr[i] va arr[j]
-                gd = arr[i];
+                giamDan = arr[i];
                 arr[i] = arr[j];
-                arr[j] = gd;
+                arr[j] = giamDan;
             }
         }
     }

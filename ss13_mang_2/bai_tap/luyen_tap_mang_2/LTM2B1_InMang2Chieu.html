@@ -13,11 +13,20 @@
         [7, 4, 28, 14],
         [3, 10, 26, 7]
     ];
-    for (let i in arr) {
-        document.write("Row "+i+"<br>");
-        for (let j in arr[i])
-        {
-            document.write(arr[i][j]+"<br>");
+    //cách 1:
+    // for (let i in arr) {
+    //     document.write("Row "+i+"<br>");
+    //     for (let j in arr[i])
+    //     {
+    //         document.write(arr[i][j]+"<br>");
+    //     }
+    // }
+
+    //cách 2:
+    for (let row=0;row<arr.length;row++){
+        document.write('Row <br>');
+        for (let col=0;col<arr[row].length;col++){
+            document.write(arr[row][col]+"<br>");
         }
     }
 </script>
