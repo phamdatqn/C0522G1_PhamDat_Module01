@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="inputNumber">
+<select id="select">
+    <option  value="Feet">Feet</option>
+    <option value="Meet">Meet</option>
+</select>
+<button type="button" onclick="show()" > Convert</button>
+<p id="show"></p>
+<script>
+    // meter = 0.305 * foot
+    // foot = 3.279 * meter
+
+    function footToMeter(foot) {
+        let meet = document.getElementById('inputNumber').value;
+        let result = 0.305 * meet;
+        return result;
+    }
+    function meterToFoot(meter){
+        let foot=document.getElementById('inputNumber').value;
+        let result=3.279*foot;
+        return result;
+    }
+    function show(){
+        let show;
+        document.getElementById('select').value==='Feet'?show=footToMeter():show=meterToFoot();
+        document.getElementById('show').innerHTML=show;
+    }
+
+
+</script>
+</body>
+</html>

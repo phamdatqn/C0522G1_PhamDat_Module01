@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<span>Nhập 1 số:</span>
+<input id="inputNumber" type="number">
+<button type="button" onclick="batCau()">Tính Bình Phương Bắt cầu</button>
+<!--<button type="button" onclick="calculate()">Tính Bình Phương bằng calculate</button>-->
+<p id="show"></p>
+<script>
+
+    //cach 1:
+    // function calculate() {
+    //     let number=parseInt(document.getElementById('inputNumber').value);
+    //     let result =1;
+    //         result=number*number;
+    //     document.getElementById('show').innerText=number+' bình phương bằng: '+result;
+    // }
+
+
+    // Cach2
+    let number=parseInt(prompt('Nhập 1 số :'));
+    let show=calculate(number);
+    document.getElementById('show').innerText='Cách 2 dùng prompt: '+number+' bình phương :'+show;
+    function calculate(numberFunction) {
+        return numberFunction*numberFunction;
+    }
+
+
+    //cách 3:
+    function square(numberFunction) {
+
+        return numberFunction*numberFunction;
+    }
+    function batCau() {
+        let number=parseInt(document.getElementById('inputNumber').value);
+        let result=square(number);
+        document.getElementById('show').innerText='Cách 3 bắt cầu hàm:  '+number+' bình phương bằng: '+result;
+    }
+</script>
+</body>
+</html>

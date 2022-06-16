@@ -11,6 +11,7 @@
     // c. Đổi chuỗi đã cho sang chữ thường
     // d. Đổi chuỗi đã cho sang vừa chữ hoa vừa chữ thường (các ký tự chữ hoa thì thành chữ
     let str=prompt('Nhập 1 chuỗi:');
+    let str2="";
     let arr=new Array();
     for (let i=0;i<str.length;i++){
         arr[i]=str[i];
@@ -24,10 +25,13 @@
         first++;
         last--;
     }
-    document.write(arr);
+    for (let i=0;i<arr.length;i++){
+        str2=str2+arr[i];
+    }
+    document.write(str2);
 
     // b. Đổi chuỗi đã cho sang chữ hoa
-    let str=prompt('Nhập 1 chuỗi:');
+    // let str=prompt('Nhập 1 chuỗi:');
 </script>
 </body>
 </html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    /*Bài toán đếm số lần xuất hiện của từ trong chuỗi*/
+
+    let str = prompt('Nhập ');
+    let arr1 = str.split(" "); //mảng sau khi chuyển chuỗi thành mảng
+    let arr2 = new Array(0); //mảng chứa kí tự không trùng lặp
+    let arr3 = new Array(0); //mảng đếm số lần xuất hiện
+
+    for(let index = 0; index<arr1.length; index++){
+        let position  = arr2.indexOf(arr1[index]);
+
+        //nếu từ đó chưa tồn tại
+        if(position == -1){
+            arr2.push(arr1[index]); //thêm vào mảng 2
+            arr3.push(1); //đếm số lần xuất hiện là 1
+        } else {
+            //nếu mảng đã tồn tại thì đếm lên 1 đơn vị.
+            arr3[position] = arr3[position] + 1;
+        }
+    }
+
+    /*hiển thị kết quả*/
+    for(let index in arr2 ){
+        document.write(arr2[index] + " - " + arr3[index] + "<br>")
+    }
+
+</script>
+</body>
+</html>

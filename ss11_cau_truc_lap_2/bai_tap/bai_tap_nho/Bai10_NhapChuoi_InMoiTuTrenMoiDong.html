@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    //    Nhập một chuổi ký tự tuỳ ý, sau đó thực hiện công việc sau:
+    //    a. In mỗi từ trên mỗi dòng
+    //    b. Đếm số từ có trong chuổi đã cho.
+    //    b. Đưa ra bảng tần số xuất hiện của các từ.
+    //
+    let str = prompt('Nhập chuỗi: ');
+    let str1 = "";
+    //str.split => cắt khoảng trắng trong chuỗi.
+    // let arr = str.split(" ");
+    let arr = new Array();
+    let cat = "<br>";
+    let count;
+    for (let i = 0; i < str.length; i++) {
+        arr[i] = str[i];
+    }
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === " ") {
+            arr[i] = cat;
+            count = 2;
+            count++;
+        }
+    }
+    for (let i = 0; i < arr.length; i++) {
+        str1 = str1 + arr[i];
+    }
+    document.write(str1);
+    document.write('<br><br><br> Có ' + count + " từ trong mảng");
+
+
+    //
+</script>
+</body>
+</html>

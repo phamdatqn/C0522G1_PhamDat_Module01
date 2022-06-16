@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // c. Đổi chuổi hoa sang thuong
+    let str = prompt('Nhập chuổi thường: ');
+    let str1="";
+    let arr=new Array();
+    let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let lower = 'abcdefghijklmnopqrstuvwxyz';
+    for (let i=0;i<str.length;i++){
+        arr[i]=str[i];
+    }
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < upper.length; j++) {
+            if (arr[i] === upper[j]) {
+                arr[i] = lower[j]
+            }
+        }
+    }
+    for (let i=0;i<arr.length;i++){
+        str1=str1+arr[i];
+    }
+    document.write(str1);
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Tạo hàm nhận vào một đối số dạng số, tăng giá trị đối số đó lên 1 và trả lại giá trị cho lời gọi hàm. -->
+<!--Gọi hàm từ trong phần của trang web và hiển thị kết quả lên màn hình.-->
+
+</body>
+<button onclick="increase()">>>> Number++ <<</button>
+<p id="show"></p>
+<script>
+    let number=parseInt(prompt('Nhập 1 số: '));
+    function increase() {
+        number++;
+        document.getElementById('show').innerText=number;
+    }
+</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function game(answer) {
+        let result = "";
+        if (answer) {
+            result='Oke. Tôi sẽ chơi với bạn';
+        } else {
+            result='rất tiếc.';
+        }
+        return result;
+    }
+    let showMessenger=confirm('Bạn có muốn chơi game không? ');
+    let theAnser=game(showMessenger);
+    alert(theAnser);
+</script>
+</body>
+</html>

@@ -33,6 +33,7 @@
     //cách 2:
     let arr=new Array();
     let str = prompt('Nhập chuỗi: ');
+    let str2="";
     let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     let lower = 'abcdefghijklmnopqrstuvwxyz';
 
@@ -49,7 +50,10 @@
             }
         }
     }
-    document.write(arr.join(' '));
+    for (let i=0;i<arr.length;i++){
+        str2=str2+arr[i];
+    }
+    document.write(str2);
 </script>
 </body>
 </html>

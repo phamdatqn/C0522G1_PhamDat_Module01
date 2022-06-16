@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemTra(number) {
+        if (number < 2) {
+            return false;
+        }
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    //ktra 1 số
+    let inputNumber = prompt('Nhập số: ');
+    // let result = kiemTra(inputNumber);
+    // if (result) {
+    //     alert('Là số nguyên tố');
+    // }
+    // else {
+    //     alert('khong Là số nguyên tố');
+    // }
+
+
+    //in số nguyên tố nhỏ hơn số nhập
+    // for (let i=2;i<inputNumber;i++){
+    //     if (kiemTra(i)){
+    //         document.write(i+"<br>");
+    //     }
+    // }
+
+
+    // in bao nhiêu số.
+    let NT = 2;
+    let count = 0;
+    while (count < inputNumber) {
+        if (kiemTra(NT)) {
+            count++;
+            document.write(NT + "<br>");
+        }
+        NT++;
+    }
+</script>
+</body>
+</html>

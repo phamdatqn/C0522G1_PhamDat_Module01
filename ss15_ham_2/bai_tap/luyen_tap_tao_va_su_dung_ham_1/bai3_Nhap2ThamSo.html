@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--Tạo hàm nhận vào hai tham số. -->
+<!--Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai, hiển thị hộp thoại thông báo cho người dùng.-->
+<!--Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số.-->
+<body>
+<p> Kết quả: </p>
+<p id="show" ></p>
+<script>
+    let number1=parseInt(prompt('Nhập số thứ nhất: '));
+    let number2=parseInt(prompt('Nhập số thứ hai: '));
+    function myFunction(numberA,numberB) {
+        if (numberA>numberB){
+            return 'Số '+numberA+' lớn hơn số '+numberB;
+        }else {
+            let sum=0;
+            sum=numberA+numberB;
+            return 'Tổng của '+numberA +' và ' +numberB+ ' là: '+sum;
+        }
+    }
+    let value=myFunction(number1,number2);
+    document.getElementById('show').innerText=value;
+</script>
+</body>
+</html>

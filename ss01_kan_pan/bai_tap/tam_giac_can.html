@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //cach 1:
+    // let height = parseInt(prompt('Nhập chiều cao:'));
+    // for (let i = 1; i <=height ; i++) {
+    //     for (let j = 1; j <=(height-i) ; j++) {
+    //         document.write('&ensp;');
+    //     }
+    //     for (let j = 1; j <(2*i) ; j++) {
+    //         document.write('*');
+    //     }
+    //     document.write('<br>');
+    // }
+
+
+    //cách 2:
+    let height = parseInt(prompt("Nhập chiều cao tam giác cân: "));
+    let triangle = "<table>";
+    for (let i = 1; i <= height; i++) {
+        triangle += "<tr>";
+        for (let j = 1; j <= height * 2 - 1; j++) {
+            if (j <= height - i || j >= height + i) {
+                triangle += "<td>" + "</td>";
+            } else {
+                triangle += "<td>" + "*" + "</td>";
+            }
+        }
+        triangle += "</tr>";
+    }
+    triangle += "</table>";
+    document.write(triangle);
+
+</script>
+</body>
+</html>

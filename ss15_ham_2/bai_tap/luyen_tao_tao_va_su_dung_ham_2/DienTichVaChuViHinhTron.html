@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<span>Kết quả:</span>
+<input id="inputNumber" type="number">
+<button onclick="show()" type="button"> Tính</button>
+<p id="show"></p>
+
+<script>
+    //Cách 1 dùng alert
+    // let radius=parseFloat(prompt('Nhập bán kính: '));
+    // alert('Diện tích là: '+circleArea(radius).toFixed(2)+" Chu vi là: "+circumferenceArea(radius).toFixed(2));
+    // function circleArea(radius) {
+    //     return radius * radius * Math.PI;
+    // }
+    // function circumferenceArea(radius) {
+    //     return radius*2*Math.PI;
+    // }
+
+    //cách 2 in lên html:
+    function circleArea(radius) {
+        return radius * radius * Math.PI;
+    }
+    function circumference(radius) {
+        return radius*2*Math.PI;
+    }
+    function show() {
+        let radius=parseFloat(document.getElementById('inputNumber').value);
+        let dienTich=circleArea(radius);
+        let chuVi=circumference(radius);
+        document.getElementById('show').innerHTML='Diện tích là: '+dienTich.toFixed(2)+ " <br>"
+        +' Chu vi là: '+chuVi.toFixed(2);
+
+
+    }
+</script>
+</body>
+</html>
