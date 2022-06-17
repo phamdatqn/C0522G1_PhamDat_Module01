@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="show"></p>
+<script>
+    let number=parseInt(prompt('Nhập 1 số: '));
+    function check(number) {
+        if (number>=0){
+            return true;
+        }else {
+            return false;
+        }
+    }
+    document.getElementById('show').innerHTML= check(number);
+</script>
+</body>
+</html>

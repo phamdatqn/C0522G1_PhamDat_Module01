@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="show"></p>
+<script>
+    let number1 = prompt('Nhập số thứ nhất: ');
+    let number2 = prompt('Nhập số thứ hai: ');
+    document.getElementById('show').innerHTML = swap(number1, number2);
+    function swap(number1, number2) {
+        let temp;
+        temp = number1;
+        number1 = number2;
+        number2 = temp;
+        return number1 + " " + number2;
+    }
+</script>
+</body>
+</html>

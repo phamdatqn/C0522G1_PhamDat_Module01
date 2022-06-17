@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    //cách 1:thủ công
+    // let str=prompt('Nhập chuỗi:');
+    // let arr=new Array(str);
+    // for (let i=0;i<str.length;i++){
+    //     arr[i]=str[i];
+    // }
+    // let palindrome=true;
+    // function isPalindrome(){
+    //     let mid=arr.length/2;
+    //     let j;
+    //     for (let i=0;i<=mid;i++){
+    //         j=arr.length-1-i;
+    //         if (arr[i]!==arr[j]){
+    //                 palindrome=false;
+    //                 break;
+    //         }
+    //
+    //     }
+    //     if (palindrome==true){
+    //         alert('Là chuỗi đối xứng');
+    //     }else {
+    //         alert('Không phải chuỗi đối xứng');
+    //     }
+    // }
+    // isPalindrome();
+
+
+    //cách 2 đệ quy.
+    let str=prompt('Nhập chuỗi');
+    // let arr=new Array(str);
+    // for (let i =0;i<str.length;i++){
+    //     arr[i]=str[i];
+    // }
+    function isPalindrome(str) {
+        let str2="";
+        if (str.length<2){
+            return true;
+        }
+        for (let i=0;i<str.length;i++){
+            if (str[0]===str[str.length-1]){
+                for (let j=1;j<str.length;j++){
+                    str2+=str[i];
+                }
+                return isPalindrome(str2);
+            }
+        }return false;
+    }
+    alert(isPalindrome(str));
+</script>
+</body>
+</html>
