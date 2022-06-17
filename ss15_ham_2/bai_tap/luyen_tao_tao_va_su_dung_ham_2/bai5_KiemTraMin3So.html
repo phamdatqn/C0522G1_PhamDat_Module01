@@ -10,18 +10,17 @@
     let number1 = prompt('Nhập số thứ nhất: ');
     let number2 = prompt('Nhập số thứ hai: ');
     let number3 = prompt('Nhập số thứ ba: ');
-
     function check(number1, number2, number3) {
         let min = number1;
-        if (min > number2) {
+        if (min >= number2) {
             min = number2;
         }
-        if (min > number3) {
+        if (min >= number3) {
             min = number3;
         }
         return min;
     }
-    document.getElementById('show').innerHTML="số nhỏ nhất trong 3 số là: "+check(number1,number2,number3);
+    document.getElementById('show').innerHTML = "số nhỏ nhất trong 3 số là: " + check(number1, number2, number3);
 </script>
 </body>
 </html>
