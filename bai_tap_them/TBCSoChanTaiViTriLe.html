@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--4. Viết chương trình cho người dùng nhập vào 1-->
+<!--mảng số nguyên với độ dài cho người dùng tùy-->
+<!--chọn tuy nhiên không được lớn hơn 50. Sau đó tiếp-->
+<!--tục thực hiện 2 yêu cầu:-->
+<!--a) In ra mảng người dùng vừa nhập.-->
+<!--b) Tính trung bình cộng của số chẵn tại vị trí lẻ trong mảng-->
+
+<script>
+    let arr = [];
+    let number = parseInt(prompt('Nhập số lượng mảng'));
+    while (number > 50 || number < 1) {
+        number = prompt('Nhập sai');
+    }
+    for (let i = 0; i < number; i++) {
+        arr[i] = parseInt(prompt('Nhập phần tử thứ ' + (i + 1) + " của mảng"));
+    }
+    document.write(arr);
+    check(arr);
+    document.write("<br> AVG của tổng số chẵn ở vị trí lẻ bằng: "+check(arr));
+    function check(arr) {
+        let sum=0;
+        let count=0;
+        for (let i=0;i<arr.length;i++){
+            if (arr[i]%2===0 && i%2!==0){
+                sum=sum+arr[i];
+                count++;
+            }
+        }
+        if (count===0){
+            return 'Không có số chẵn ở vị trí lẻ nào cả'
+        }else {
+            return (1.0*sum)/count;
+        }
+    }
+</script>
+</body>
+</html>

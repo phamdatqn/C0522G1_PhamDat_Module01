@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="show"></p>
+<script>
+    let height = parseInt(prompt("Nhập chiều cao "));
+
+    function tamGiacVuongDuoiRight(height) {
+        let table = "<table>";
+        for (let row = 0; row < height; row++) {
+            table += "<tr>";
+            for (let col = 0; col < height; col++) {
+                if (col < height - 1 - row) {
+                    table += "<td></td>";
+                } else {
+                    table += "<td>" + "*" + "</td>";
+                }
+            }
+            table += "</tr>";
+        }
+        table += "</table>";
+        document.getElementById('show').innerHTML = table;
+    }
+
+  //  tamGiacVuongDuoiRight(height);
+    function tamGiacVuongTrenRight(height) {
+        let table = "<table border='1'>";
+        for (let row = 0; row < height; row++) {
+            table += "<tr>";
+            for (let col = 0; col < height; col++) {
+                if (col < row ) {
+                    table += "<td></td>";
+                } else {
+                    table += "<td>" + "*" + "</td>"
+                }
+            }
+            table += "</tr>";
+        }
+        table += "</table>";
+        document.getElementById('show').innerHTML = table;
+    }
+   // tamGiacVuongTrenRight(height);
+    function tamGiacCan(height) {
+        let table="<table>";
+        for (let row=0;row<height;row++){
+            table+="<tr>";
+            for (let col=0;col<height*2-1;col++){
+                if (col<height-1-row || col>height-1+row){
+                    table=table+"<td></td>";
+                }else {
+                    table=table+"<td>"+"*"+"</td>";
+                }
+            }
+            table=table+"</tr>";
+        }
+        table=table+"</table>";
+        document.getElementById('show').innerHTML = table;
+    }
+   // tamGiacCan(height);
+    function tamGiacCanRong(height) {
+        let table="<table>";
+        for (let row=0;row<height;row++){
+            table+="<tr>";
+            for (let col=0;col<height*2-1;col++){
+                if (col===height-1-row || col===height-1+row || row===height-1){
+                    table=table+"<td>"+"*"+"</td>";
+                }else {
+                    table=table+"<td></td>";
+                }
+            }
+            table=table+"</tr>";
+        }
+        table=table+"</table>";
+        document.getElementById('show').innerHTML = table;
+    }
+    tamGiacCanRong(height);
+
+
+</script>
+</body>
+</html>

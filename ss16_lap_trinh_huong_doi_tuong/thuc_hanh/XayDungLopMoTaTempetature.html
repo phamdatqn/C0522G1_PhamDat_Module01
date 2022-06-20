@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(temperatureC) {
+            this.temperatureC = temperatureC;
+        }
+
+        setTemperatureC(temperatureC) {
+            while (temperatureC <= -273) {
+                temperatureC=parseInt(prompt('Nhập lại'));
+            }
+                this.temperatureC = temperatureC;
+        }
+
+        getTemperatureC() {
+            return this.temperatureC;
+        }
+
+        getGoToTemperatureF() {
+            return (this.temperatureC * 9 + 160) / 5;
+        }
+
+        getGoToTemperatureK() {
+            return this.temperatureC + 273.15;
+        }
+    }
+    let result = new Temperature();
+    result.setTemperatureC(parseFloat(prompt("nhập giá trị độ C")));
+    alert(result.getTemperatureC() + " độ C bằng " + result.getGoToTemperatureF() + " độ F");
+    alert(result.getTemperatureC() + " độ C bằng " + result.getGoToTemperatureK() + " độ Kevin");
+</script>
+</body>
+</html>

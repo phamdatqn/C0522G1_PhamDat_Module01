@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //function
+    // let Circle=function (radius) {
+    //     this.radius=radius;
+    //     this.getRadius=function () {
+    //         return radius;
+    //     }
+    //     this.getArea=function () {
+    //         return this.radius*this.radius*Math.PI;
+    //     }
+    // };
+    // let circle =new Circle(2);
+    // let radius=circle.getRadius();
+    // let area=circle.getArea();
+    // alert("Bán kính: "+radius+" ; Diện tích: "+area);
+    //
+    // let circle3=new Circle(3);
+    // let radius3=circle3.getRadius();
+    // let area3= circle3.getArea();
+    // alert("Bán kính 3: "+radius3+" ; Diện tích: "+area3);
+    //
+    // let circle4 =new Circle(4);
+    // let radius4=circle4.getRadius();
+    // let area4=circle4.getArea();
+    // alert("Bán kính 4: "+radius4+" ; Diện tích: "+area4);
+    //
+    // let circle5= new Circle(5);
+    // alert("Bán kính 5: "+circle5.getRadius()+"; Diện tích: "+ circle5.getArea());
+    //
+    // let circle6=new Circle(6);
+    // alert("Bán kính 6: "+circle6.getRadius()+"; Diện tích: "+ circle6.getArea());
+    //
+    // let circle7=new Circle(7);
+    // alert("Bán kính 6: "+circle7.getRadius()+"; Diện tích: "+ circle7.getArea());
+
+
+    //class:
+    class Circle{
+        constructor(radius) {
+            this.radius=radius;
+        }
+        getRadius(){
+            return this.radius;
+        }
+        getArea(){
+            return this.radius*this.radius*Math.PI;
+        }
+    }
+    let circle=new Circle(2);
+    let radius=circle.getRadius();
+    let area=circle.getArea();
+    alert("Bán kính: "+radius+" thì Diện tích là: "+area.toFixed(2));
+
+    let circle4=new Circle(4);
+    let radius4=circle4.getRadius();
+    let area4=circle4.getArea();
+    alert("Bán kính: "+radius4+" thì Diện tích là: "+area4.toFixed(2));
+
+    let circle5=new Circle(5);
+    let radius5=circle5.getRadius();
+    let area5=circle5.getArea();
+    alert("Bán kính: "+radius5+" thì Diện tích là: "+area5.toFixed(2));
+
+    let circle6=new Circle(6);
+    let radius6=circle6.getRadius();
+    let area6=circle6.getArea();
+    alert("Bán kính: "+radius6+" thì Diện tích là: "+area6.toFixed(2));
+
+    let circle7=new Circle(7);
+    let radius7=circle7.getRadius();
+    let area7=circle7.getArea();
+    alert("Bán kính: "+radius7+" thì Diện tích là: "+area7.toFixed(2));
+
+</script>
+</body>
+</html>

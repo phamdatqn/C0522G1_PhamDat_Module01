@@ -7,20 +7,41 @@
 <body>
 <p id="show"></p>
 <script>
-    let number1 = prompt('Nhập số thứ nhất: ');
-    let number2 = prompt('Nhập số thứ hai: ');
-    let number3 = prompt('Nhập số thứ ba: ');
-    function check(number1, number2, number3) {
-        let min = number1;
-        if (min >= number2) {
-            min = number2;
-        }
-        if (min >= number3) {
-            min = number3;
+    // let number1 = prompt('Nhập số thứ nhất: ');
+    // let number2 = prompt('Nhập số thứ hai: ');
+    // let number3 = prompt('Nhập số thứ ba: ');
+    // function check(number1, number2, number3) {
+    //     let min = number1;
+    //     if (min >= number2) {
+    //         min = number2;
+    //     }
+    //     if (min >= number3) {
+    //         min = number3;
+    //     }
+    //     return min;
+    // }
+    // document.getElementById('show').innerHTML = "số nhỏ nhất trong 3 số là: " + check(number1, number2, number3);
+
+
+
+    //cách này ra kết quả đúng nhưng tham số không sáng-> xóa thì lại không nhận?
+    let arr = new Array();
+    for (let i = 0; i < 3; i++) {
+        arr[i] = prompt('Nhập số thứ ' + (i + 1));
+    }
+    let number1 = arr[0];
+    let number2 = arr[1];
+    let number3 = arr[2];
+    document.getElementById('show').innerHTML = "số nhỏ nhất trong 3 số là: " + check2(number1, number2, number3);
+    function check2(number1, number2, number3) {
+        let min = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (min > arr[i]) {
+                min = arr[i];
+            }
         }
         return min;
     }
-    document.getElementById('show').innerHTML = "số nhỏ nhất trong 3 số là: " + check(number1, number2, number3);
 </script>
 </body>
 </html>

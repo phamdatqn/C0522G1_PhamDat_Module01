@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="show"></p>
+<script>
+    let inputNumber=parseInt(prompt('Nhập số :'));
+    let show="1 2 ";
+    function isNotPrime(number) {
+        for (let i=2;i<=Math.sqrt(number);i++){
+            if (number%i===0){
+                return true;
+            }
+        }
+        return false;
+    }
+    for (let i=2;i<=inputNumber;i++){
+
+        if (isNotPrime(i)){
+            show=show+i+" ";
+        }
+    }
+    document.getElementById('show').innerHTML=show;
+</script>
+</body>
+</html>

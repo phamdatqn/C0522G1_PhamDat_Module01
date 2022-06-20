@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="show"></p>
+<script>
+    let number=prompt('Nhập số lượng phần tử ');
+    let arr=[];
+    let arrNewNumber=[];
+    for (let i=0;i<number;i++){
+        arr[i]=prompt('Nhập phần tử thứ '+i+ " của mảng ");
+    }
+    function check(arr) {
+        for (let i=0;i<arr.length;i++){
+            let deleteDuplicateNumber=0;
+            for (let j=0;j<arrNewNumber.length;j++){
+                if (arr[i]===arrNewNumber[j]){
+                    deleteDuplicateNumber++;
+                }
+            }
+            if (deleteDuplicateNumber===0){
+                arrNewNumber.push(arr[i]);
+            }
+        }
+        for (let i=0;i<arrNewNumber.length;i++){
+            let count=0;
+            for (let j=0;j<arr.length;j++){
+                if (arrNewNumber[i]===arr[j]){
+                    count++;
+                }
+            }
+            document.write("Số lần xuất hiện của "+ arrNewNumber[i]+ " là: "+count+"<br>");
+        }
+     }
+    check(arr);
+</script>
+</body>
+</html>

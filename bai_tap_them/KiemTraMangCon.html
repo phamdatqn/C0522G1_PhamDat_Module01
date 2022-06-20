@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--6. Xây dựng 1 hàm nhận vào 2 mảng bất kì. Nếu-->
+<!--mảng thứ 2 là con của mảng thứ nhất thì trả về-->
+<!--true, ngược lại trả về false. Ví dụ:-->
+<!--Mảng thứ nhất [ 1, 2, 3, 4 ] mảng thứ 2 [2, 3]-->
+<!--=> true.-->
+<!--Mảng thứ nhất [ 1, 2, 3, 4 ] mảng thứ 2 [3, 2]-->
+<!--=> false.-->
+<script>
+    let arr = [];
+    let subArr = [];
+    let number = prompt('Nhập số lượng phần tử mảng mẹ: ');
+    for (let i = 0; i < number; i++) {
+        arr[i] = prompt('Nhập phần tử ' + (i + 1) + " mảng mẹ");
+    }
+    let number2 = prompt('Nhập số lượng phần tử mảng con: ');
+    for (let i = 0; i < number2; i++) {
+        subArr[i] = prompt('Nhập phần tử ' + (i + 1) + " mảng con");
+    }
+    alert(subArray(arr, subArr));
+    // alert(arr);
+    // alert(subArr);
+    function subArray(arr1, subArr) {
+        for (let i = 0; i < arr1.length; i++) {
+            if (subArr[0] === arr1[i]) {
+                let j ;
+                for (j=0; j < subArr.length; j++) {
+                    if (subArr[j] !== arr1[i + j]) {
+                        break;
+                    }
+                }
+                if (j === subArr.length) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+</script>
+</body>
+</html>
