@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hiển thị n sô nguyên tố đầu tiên</title>
+    <title>Title</title>
 </head>
 <body>
 <script>
@@ -13,6 +13,11 @@
         getWeight() {
             return this.weight;//2
         }
+
+        setWeight(weight) {
+            this.weight = weight;
+        };
+
         isEmpty() {
             if(this.weight <= 0){
                 return true;
@@ -88,9 +93,9 @@
     }
 
 
-    let adam = new Human("adam", 1, 75);
-    let eva = new Human("eva", 2, 65);
-    let apple_1 = new Apple(10);
+    let adam = new Human("adam", 1, 65);
+    let eva = new Human("eva", 2, 55);
+    let newApple = new Apple(10);
 
 
     // adam.checkApple(apple_1)
@@ -98,22 +103,23 @@
     eva.say("I am Eva" + "<br>");
 
 
-    while (apple_1.isEmpty() !== true) {
+    while (newApple.isEmpty() !== true) {
         document.write("Adam ăn táo" + "<br>");
-        adam.eat(apple_1);
+        adam.eat(newApple);
 
         document.write("Quả táo còn: " + "<br>");
-        document.write(apple_1.getWeight() + " đơn vị" + "<br>");
+        document.write(newApple.getWeight() + " đơn vị" + "<br>");
         document.write( "Cân nặng của Adm là: " + adam.getWeight() + " đơn vị" + "<br>");
 
         document.write("<br>")
 
         document.write("Eva ăn táo" + "<br>");
-        eva.eat(apple_1);
+        eva.eat(newApple);
 
         document.write("Quả táo còn: " + "<br>");
-        document.write(apple_1.getWeight() + " đơn vị" + "<br>");
+        document.write(newApple.getWeight() + " đơn vị" + "<br>");
         document.write( "Cân nặng là: " + eva.getWeight() + " đơn vị" + "<br>");
     }
 </script>
 </body>
+</html>

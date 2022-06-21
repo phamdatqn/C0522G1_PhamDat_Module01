@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+class SwitchButton {
+    constructor(status,lamp) {
+        this.status=status;
+        this.lamp=lamp;
+    }
+    setStatus(status){
+        this.status=status;
+    }
+    getStatus(){
+        return this.status;
+    }
+    setLamp(lamp){
+        this.lamp=lamp;
+    }
+    getLamp(){
+        return this.lamp;
+    }
+    connectToLamp(electriclamp){
+        return this.lamp = electriclamp;
+    }
+
+    switchOff(){
+        this.lamp.status = false;
+        return this.status = false;
+    }
+
+    switchOn(){
+        this.lamp.status = true;
+        return this.status = true;
+    }
+}
+class ElectricLamp{
+    constructor(status) {
+        this.status=status;
+    }
+    getStatus(){
+        return this.status;
+    }
+}
+let newElectricLamp=new ElectricLamp(false)
+let newSwitchButton=new SwitchButton(false,newElectricLamp);
+document.write("bật 1 "+newSwitchButton.switchOn()+"<br>");
+document.write("tắt 1 "+newSwitchButton.switchOff()+"<br>");
+
+document.write("bật 2 "+newSwitchButton.switchOn()+"<br>");
+document.write("tắt 2 "+newSwitchButton.switchOff()+"<br>");
+
+document.write("bật 3 "+newSwitchButton.switchOn()+"<br>");
+document.write("tắt 3 "+newSwitchButton.switchOff()+"<br>");
+
+document.write("bật 4 "+newSwitchButton.switchOn()+"<br>");
+document.write("tắt 4 "+newSwitchButton.switchOff()+"<br>");
+
+document.write("bật 5 "+newSwitchButton.switchOn()+"<br>");
+document.write("tắt 5 "+newSwitchButton.switchOff()+"<br>");
+
+document.write("bật 6 "+newSwitchButton.switchOn()+"<br>");
+document.write("tắt 6 "+newSwitchButton.switchOff()+"<br>");
+
+document.write("bật 7 "+newSwitchButton.switchOn()+"<br>");
+document.write("tắt 7 "+newSwitchButton.switchOff()+"<br>");
+
+document.write("bật 8 "+newSwitchButton.switchOn()+"<br>");
+document.write("tắt 8 "+newSwitchButton.switchOff()+"<br>");
+
+document.write("bật 9 "+newSwitchButton.switchOn()+"<br>");
+document.write("tắt 9 "+newSwitchButton.switchOff()+"<br>");
+
+document.write("bật 10 "+newSwitchButton.switchOn()+"<br>");
+document.write("tắt 10 "+newSwitchButton.switchOff()+"<br>");
+</script>
+</body>
+</html>

@@ -22,18 +22,18 @@
             return this.temperatureC;
         }
 
-        getGoToTemperatureF() {
+        convertToF() {
             return (this.temperatureC * 9 + 160) / 5;
         }
 
-        getGoToTemperatureK() {
+        convertToK() {
             return this.temperatureC + 273.15;
         }
     }
     let result = new Temperature();
     result.setTemperatureC(parseFloat(prompt("nhập giá trị độ C")));
-    alert(result.getTemperatureC() + " độ C bằng " + result.getGoToTemperatureF() + " độ F");
-    alert(result.getTemperatureC() + " độ C bằng " + result.getGoToTemperatureK() + " độ Kevin");
+    alert(result.getTemperatureC() + " độ C bằng " + result.convertToF() + " độ F");
+    alert(result.getTemperatureC() + " độ C bằng " + result.convertToK() + " độ Kevin");
 </script>
 </body>
 </html>

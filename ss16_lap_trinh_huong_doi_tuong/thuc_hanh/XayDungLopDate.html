@@ -89,8 +89,8 @@
             this.month=month;
             this.year=year;
         }
-        getToString(){
-            return this.day+ "/"+ this.month+"/"+this.year;
+        ToString(){
+            return this.day+ "/0"+ this.month+"/"+this.year;
         }
     }
     let date=new MyDate(2,2,2007);
@@ -108,8 +108,8 @@
     year=date.getYear()
     alert('Ngày '+day+" tháng "+month+' Năm '+year);
 
-    date.getDate(20,"06",2022);
-    alert(date.getToString());
+    date.getDate(20,6,2022);
+    alert(date.ToString());
 </script>
 </body>
 </html>
