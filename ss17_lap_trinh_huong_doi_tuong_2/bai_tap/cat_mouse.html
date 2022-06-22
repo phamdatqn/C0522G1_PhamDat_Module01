@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Mouse {
+        status =true;
+        soundMouse;
+        constructor(name, weight, speed) {
+            this.nameMouse = name;
+            this.weightMouse = weight;
+            this.speedMouse = speed;
+
+        }
+
+        getStatus() {
+            if (this.status) {
+                alert("Chuột sống");
+            } else {
+                alert("Chuột chết");
+            }
+        }
+
+        die() {
+            this.status = false;
+        }
+
+        noDie() {
+             this.status = true;
+        }
+
+        actionMouse(sound) {
+            this.soundMouse = sound;
+            alert(this.soundMouse);
+        }
+
+    }
+
+
+    class Cat {
+        soundCat;
+        constructor(name, weight, speed, mouse) {
+            this.nameCat = name;
+            this.weightCat = weight;
+            this.speedCat = speed;
+            this.mouse = mouse;
+        }
+
+        getWeightCat() {
+            return this.weightCat;
+        }
+
+        setSoundCat(soundCat) {
+            this.soundCat = soundCat;
+        }
+
+        getSoundCat() {
+            alert(this.soundCat);
+        }
+
+        actionCat(sound) {
+            this.soundCat = sound;
+            alert(this.soundCat);
+        }
+        catchTheMouse(rat) {
+            if (rat.speedMouse < this.speedCat) {
+                alert("Mèo đã bắt được chuột");
+                rat.die();
+               rat.getStatus();
+            } else {
+                alert("Mèo không bắt được chuột");
+                rat.getStatus();
+            }
+        }
+
+        eatTheMouse(rat) {
+            if (rat.noDie()) {
+                alert("Mèo đói");
+
+            }else {
+                alert("Chuột đã bị mèo thịt");
+            }
+        }
+
+    }
+
+    let rat = new Mouse("cat", 10, 100);
+    let tom = new Cat("tom", 20,200, rat);
+    let status=new Mouse();
+    tom.catchTheMouse(rat);
+    tom.eatTheMouse(rat);
+   status.getStatus(rat);
+</script>
+</body>
+</html>

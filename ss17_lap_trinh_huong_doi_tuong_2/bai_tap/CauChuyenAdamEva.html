@@ -33,6 +33,9 @@
                 this.weight--;
             }
         }
+        toString(){
+                return document.write("<br>5 ngày sau béo phì <br> nên sẽ giảm béo 2 tuần") ;
+        }
     }
 
     class Human{
@@ -65,14 +68,16 @@
                 return "Female";
             }
         }
-
+        say(string) {
+            console.log(string);
+        }
         setWeight(weight){
             this.weight = weight;
         }
 
-        say(string) {
-            console.log(string);
-        }
+        // say(string) {
+        //
+        // }
 
         checkApple(apple){
             return apple.isEmpty();
@@ -90,18 +95,16 @@
         getInfo(human){
             alert(human.name + " " +human.weight + " " +human.getGender());
         }
+
     }
 
 
-    let adam = new Human("adam", 1, 65);
-    let eva = new Human("eva", 2, 55);
-    let newApple = new Apple(10);
-
-
+    let adam = new Human("adam", 1, 60);
+    let eva = new Human("eva", 2, 50);
+    let newApple = new Apple(15);
     // adam.checkApple(apple_1)
     adam.say("I am Adam" + "<br>");
     eva.say("I am Eva" + "<br>");
-
 
     while (newApple.isEmpty() !== true) {
         document.write("Adam ăn táo" + "<br>");
@@ -119,7 +122,14 @@
         document.write("Quả táo còn: " + "<br>");
         document.write(newApple.getWeight() + " đơn vị" + "<br>");
         document.write( "Cân nặng là: " + eva.getWeight() + " đơn vị" + "<br>");
+
     }
+    if (newApple.getWeight()===0){
+        newApple.toString();
+        document.write("<br>Cân nặng Adam còn:"+(adam.getWeight()-5)+"<br>");
+        document.write("Cân nặng Eva còn:"+(eva.getWeight()-5)+"<br>");
+    }
+
 </script>
 </body>
 </html>
