@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--: 'o', 'u', 'i', 'a', 'e' hoặc 'O', 'U', 'I', 'A', 'E'-->
+<script>
+    let inputStr = prompt('Nhập ký tự cần kiểm tra: ');
+    switch (inputStr) {
+        case 'o':
+        case 'u':
+        case 'i':
+        case 'a':
+        case 'e':
+        case 'O':
+        case 'U':
+        case 'I':
+        case 'A':
+        case 'E':
+            alert('ký tự ' + inputStr + ' là nguyên âm')
+            break;
+        case '1':
+        case '2':
+        case '3':
+        case '4':
+        case '5':
+        case '6':
+        case '7':
+        case '8':
+        case '9':
+        case '0':
+            alert('ký tự ' + inputStr + ' bạn vừa nhập là ký tự số')
+            break;
+        default:
+            alert('ký tự ' + inputStr + ' có thể là phụ âm')
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Cho 2 mảng A và B chứa số nguyên. Tìm ra một mảng đã được sắp xếp chứa các phần tử xuất hiện trong mảng B nhưng lại không xuất hiện A
+Chú ý các phần tử giống nhau chỉ tính là 1 lần xuất hiện
+Ví dụ:  A=[7,2,5,3,5,3] và B=[7,2,5,4,6,3,5,3]  thì kết quả missingValue(A, B) = [4, 6]
+            7,2,5,3        7,2,5,4,6,3
+-->
+
+<script>
+    let arrA = [];
+    let arrB = [];
+    let newArrB = [];
+    let arrResult = [];
+    let count;
+    let numberA = prompt('Nhập số lượng phần tử mảng A ');
+    for (let i = 0; i < numberA; i++) {
+        arrA[i] = prompt('Nhập phần tử thứ ' + (i + 1) + " của mảng A");
+    }
+    let numberB = prompt('Nhập số lượng phần tử mảng B ');
+    for (let j = 0; j < numberB; j++) {
+        arrB[j] = prompt('Nhập phần tử thứ ' + (j + 1) + " của mảng B");
+    }
+    document.write("Mảng A đã nhập "+arrA+"<br>");
+    document.write("Mảng B đã nhập "+arrB+"<br>");
+    for (let i = 0; i < arrB.length; i++) {
+        count = 0;
+        for (let j = 0; j < newArrB.length; j++) {
+            if (arrB[i] === newArrB[j]) {
+                count++;
+            }
+        }
+        if (count === 0) {
+            newArrB.push(arrB[i]);
+        }
+    }
+    document.write("Chuỗi B sau khi cắt phần từ trùng nhau: "+newArrB+"<br>");
+
+    for (let i = 0; i < newArrB.length; i++) {
+        count = 0;
+        for (let j = 0; j < arrA.length; j++) {
+            if (newArrB[i] === arrA[j]) {
+                count++;
+            }
+        }if (count === 0) {
+            arrResult.push(newArrB[i]);
+        }
+    }
+    document.write(arrResult.sort((function(a, b){return a-b})));
+</script>
+</body>
+</html>

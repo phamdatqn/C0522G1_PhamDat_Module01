@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+Cho xâu kí tự. Hãy đếm số lượng kí tự khác nhau trong xâu đó
+Ví dụ: s = "cabca", thì kết quả differentSymbolsNaive(s) = 3.
+⇨	Có 3 kí tự khác nhau là a, b và c.
+-->
+
+<script>
+    let str=prompt('Nhập chuỗi');
+    let arrStr=[];
+    let newArr=[];
+    for (let i=0;i<str.length;i++){
+        arrStr[i]=str[i];
+    }
+    for (let i=0;i<arrStr.length;i++){
+        let count=0;
+        for (let j=0;j<newArr.length;j++){
+            if (arrStr[i]===newArr[j]){
+                count++;
+            }
+        }
+        if (count===0){
+            newArr.push(arrStr[i]);
+        }
+    }
+    document.write('Chuỗi đã nhập là: '+str);
+    document.write('<br>Chuỗi sau khi loại phần tử trùng nhau: '+newArr.join(' '));
+    document.write('<br>có '+newArr.length+" phần tử khác nhau ");
+</script>
+</body>
+</html>

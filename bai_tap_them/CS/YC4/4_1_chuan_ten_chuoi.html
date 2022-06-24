@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input = prompt('Nhập Họ & tên: ');
+    document.write("Chuỗi trước khi chuẩn hóa: "+input);
+
+    let show = chuanHoa(input);
+    document.write('<br>Chuỗi sau khi chuẩn hóa: ' + show);
+
+    let showTuDaiNhat=tuDaiNhat(input);
+    document.write('<br> Từ dài nhất  trong chuỗi là: '+showTuDaiNhat+" gồm "+showTuDaiNhat.length +" ký tự");
+    function chuanHoa(str) {
+        str = str.trim();
+        str = str.toLowerCase();
+        let newStr = "";
+        newStr += str[0].toUpperCase();
+        for (let i = 1; i < str.length; i++) {
+            if (str[i] === " " && str[i + 1] === " ") {
+            } else if (str[i-1] === " ") {
+                newStr += str[i].toUpperCase();
+            } else {
+                newStr += str[i];
+            }
+        }
+        return newStr;
+    }
+    
+    function tuDaiNhat(str) {
+        let temp = "";
+        let arr = [];
+        for (let i = 0; i < str.length; i++) {
+            if (str[i] !== " ") {
+                temp = temp + str[i];
+            }
+            if (str[i + 1] === " " || str[i + 1] === undefined) {
+                arr.push(temp);
+                temp = "";
+            }
+        }
+        let maxIndex = 0;
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i].length > arr[maxIndex].length) {
+                maxIndex = i;
+            }
+        }
+        return arr[maxIndex];
+    }
+
+</script>
+</body>
+</html>

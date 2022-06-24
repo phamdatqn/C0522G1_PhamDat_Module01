@@ -7,54 +7,19 @@
 <body>
 <p id="result"></p>
 <script>
-
-    class ElectricLamp{
-        constructor(status) {
-            this.status = status;
-        }
-        getStatus(){
-            return this.status;
-        }
-    }
-
-    class SwitchButton{
-        constructor(lamp, status) {
-            this.status = status;
-            this.lamp = lamp;
-        }
-        getLamp(){
-            return this.lamp;
-        }
-
-        setLamp(lamp){
-            this.lamp = lamp;
-        }
-
-        connectToLamp(Electriclamp){
-            return this.lamp = Electriclamp;
-        }
-
-        switchOff(){
-            this.lamp.status = false;
-            return this.status = false;
-        }
-
-        switchOn(){
-            this.lamp.status = true;
-            return this.status = true;
-        }
-    }
-
-
-    let electricLamp_1 = new ElectricLamp(false);
-
-    let switchButton_1 = new SwitchButton(electricLamp_1,false); // kết nối giữa  công tắc 1 và đèn 1
-
-    document.write(switchButton_1.switchOn()+"<br>");
-    document.write(electricLamp_1.getStatus()+"<br>");
-    document.write(switchButton_1.switchOff()+"<br>");
-    document.write(electricLamp_1.getStatus());
-
+    let a = [5, 6, 7]
+    let b = [3, 6, 10]
+    let c = [];
+    c[0] = 0;
+    c[1] = 0;
+    for (let i = 0; i < a.length; i++)
+        for (let j = 0; j < b.length; j++)
+            if (a[i] > b[j]) {
+                c[0]++;
+            } else if (a[i] < b[j]) {
+                c[1]++;
+            }
+    document.write(c);
 </script>
 </body>
 </html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputSalary = prompt('Nhập tiền lương :');
+    let taxMoney = 0;
+    if (inputSalary > 15000000) {
+        alert('Tiền thuế phải đóng là 15% bằng: ' + (inputSalary * 0.15) + " VNĐ")
+    } else if (inputSalary > 7000000 && inputSalary <= 15000000) {
+        alert('Tiền thuế phải đóng là 10% bằng: ' + (inputSalary * 0.10) + " VNĐ")
+    } else {
+        alert('Tiền thuế phải đóng là 5% bằng: ' + (inputSalary * 0.05) + " VNĐ")
+    }
+</script>
+</body>
+</html>

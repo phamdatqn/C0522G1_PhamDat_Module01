@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết một chương trình nhập một số từ bàn phím và in ra màn hình bằng chữ.
+Ví dụ 1234, kết quả in ra màn hình là một hai ba bốn.-->
+<script>
+    let inputNumber = prompt('Nhập 1 số: ');
+    let arr = [];
+    let show = "";
+    for (let i = 0; i < inputNumber.length; i++) {
+        arr.push(inputNumber[i]);
+    }
+    for (let i = 0; i < arr.length; i++) {
+        show += readNumber(arr[i]);
+    }
+    document.write(show);
+
+    function readNumber(number) {
+        switch (number) {
+            case "1":
+                return " một ";
+            case "2":
+                return " hai ";
+            case "3":
+                return " ba ";
+            case "4":
+                return " một ";
+            case "5":
+                return " hai ";
+            case "6":
+                return " ba ";
+            case "7":
+                return " một ";
+            case "8":
+                return " hai ";
+            case "9":
+                return " ba ";
+            case "0":
+                return " ba ";
+            default:
+                document.write('ký tự bạn nhập không phải là số <br>');
+                break;
+        }
+    }
+</script>
+</body>
+</html>

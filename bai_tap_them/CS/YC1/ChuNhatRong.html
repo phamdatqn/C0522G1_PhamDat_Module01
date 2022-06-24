@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Vẽ hình chữ nhật rỗng chiều dài n và chiều rộng m theo hình dưới đây.-->
+<script>
+    let longs=parseInt(prompt('Nhập chiều dài n'));
+    let height=parseInt(prompt('Nhập rộng dài m'));
+    for (let i=1;i<=longs;i++){
+        for (let j=1;j<=height;j++){
+            if (j===1||i===1||i===longs||j===height){
+                document.write("*");
+            }else{
+                document.write("&ensp;")
+            }
+        }
+        document.write("<br>")
+    }
+
+</script>
+</body>
+</html>

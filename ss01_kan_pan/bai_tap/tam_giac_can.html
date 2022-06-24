@@ -21,20 +21,20 @@
 
     //cách 2:
     let height = parseInt(prompt('Nhập chiều "cao tam" giác cân: '));
-    let triangle = "<table>";
+    let table = "<table>";
     for (let i = 1; i <= height; i++) {
-        triangle += "<tr>";
+        table += "<tr>";
         for (let j = 1; j <= height * 2 - 1; j++) {
             if (j <= height - i || j >= height + i) {
-                triangle += "<td>" + "</td>";
+                table += "<td>" + "</td>";
             } else {
-                triangle += "<td>" + "*" + "</td>";
+                table += "<td>" + "*" + "</td>";
             }
         }
-        triangle += "</tr>";
+        table += "</tr>";
     }
-    triangle += "</table>";
-    document.write(triangle);
+    table += "</table>";
+    document.write(table);
 
 </script>
 </body>
