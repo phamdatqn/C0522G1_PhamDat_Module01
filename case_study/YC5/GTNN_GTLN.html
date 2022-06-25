@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết hàm tìm giá trị lớn nhất, nhỏ nhất trong mảng 2 chiều-->
+<script>
+    let arr2d=[];
+    let row=prompt('Nhập số dòng của mảng 2 chiều');
+    let col=prompt('Nhập số cột của mảng 2 chiều');
+    for (let i=0;i<row;i++){
+        document.write("[ ");
+        let temp=[];
+        for (let j=0;j<col;j++){
+            temp[j]=parseInt(prompt("Nhập phần tử [ "+i+" ][ "+j+" ]"));
+            document.write(temp[j]+" ");
+        }
+        arr2d[i]=temp;
+        document.write(" ]<br>")
+    }
+    function checkNumber(arr2d) {
+        let max=arr2d[0][0];
+        let min=arr2d[0][0];
+        for (let i=0;i<arr2d.length;i++){
+            for (let j=0;j<arr2d[i].length;j++){
+                if (max<arr2d[i][j]){
+                    max=arr2d[i][j];
+                }if (min>arr2d[i][j]){
+                    min=arr2d[i][j];
+                }
+            }
+
+        }return "Max là: "+max+"<br>Min là: "+min;
+    }
+    let result=checkNumber(arr2d);
+    document.write(result);
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    document.write("Ma trận: <br>");
+    let row=prompt("nhập số lượng dòng của ma trận");
+    let col=prompt("nhập số lượng cột của ma trận");
+    let matrix=[];
+    for (let i=0;i<row;i++){
+        document.write("[ ");
+        let temp=[];
+        for (let j=0;j<col;j++){
+            temp[j]=parseInt(prompt("Nhập phần tử Ma trận ["+i+"]["+j+"]"));
+            document.write(temp[j]+" ");
+        }
+        matrix[i]=temp;
+        //alert(array2d)
+        document.write(" ]<br>");
+    }
+    document.write("Tổng các số chẵn trong ma trận là: " + sumEvenNumber(matrix));
+    function sumEvenNumber(arr2d) {
+        let sum=0;
+        for (let i=0;i<arr2d.length;i++){
+            for (let j=0;j<arr2d[i].length;j++){
+                if (arr2d[i][j]%2===0){
+                    sum+=arr2d[i][j];
+                }
+            }
+        }
+        return sum;
+    }
+</script>
+</body>
+</html>
