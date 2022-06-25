@@ -6,55 +6,7 @@
 </head>
 <body>
 <script>
-    let matrix=[];
-    let row=parseInt(prompt("nhập vào số dòng của ma trận: "));
-    let col=parseInt(prompt("nhập vào số cột của ma trận: "));
-    createArrayNumbers2D(matrix,row,col);
-    displayArr2D(matrix);
-    let arrPrime=primeInArr2D(matrix);
-    document.write("số lượng số nguyên tố trong ma trận: "+arrPrime.length+"<br>");
-    document.write(arrPrime.join(" "));
 
-
-    function createArrayNumbers2D(arr,m,n){
-        for (let i=0;i<m;i++){
-            let temp=[];
-            for(let j=0; j<n;j++){
-                temp[j]=parseInt(prompt("nhập vào phần tử thứ \["+i+"\]\["+j+"\]: "));
-            }
-            arr[i]=temp;
-        }
-    }
-    function displayArr2D(arr) {
-        for( let i=0; i<arr.length;i++){
-            for (let j=0;j<arr[i].length;j++){
-                document.write(arr[i][j]+"  ");
-            }
-            document.write("<br>");
-        }
-    }
-    function checkPrime(number) {
-        if(number<2){
-            return false;
-        }
-        for (let i=2;i<=Math.sqrt(number);i++){
-            if(number%i===0){
-                return false
-            }
-        }
-        return true;
-    }
-    function primeInArr2D(arr) {
-        let prime=[];
-        for (let i=0;i<arr.length;i++){
-            for (let j=0;j<arr[i].length;j++){
-                if(checkPrime(arr[i][j])){
-                    prime.push(arr[i][j]);
-                }
-            }
-        }
-        return prime;
-    }
 </script>
 </body>
 </html>
