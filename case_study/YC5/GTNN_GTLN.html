@@ -20,6 +20,8 @@
         arr2d[i]=temp;
         document.write(" ]<br>")
     }
+    let result=checkNumber(arr2d);
+    document.write(result);
     function checkNumber(arr2d) {
         let max=arr2d[0][0];
         let min=arr2d[0][0];
@@ -34,8 +36,7 @@
 
         }return "Max là: "+max+"<br>Min là: "+min;
     }
-    let result=checkNumber(arr2d);
-    document.write(result);
+
 </script>
 </body>
 </html>
