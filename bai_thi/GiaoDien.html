@@ -97,8 +97,7 @@
         sout += "</table>";
         document.getElementById("display").innerHTML = sout;
     }
-    display(array.sort(function (a, b){
-        return a.hoTen.localeCompare(b.hoTen)}));
+    display(array.sort(function (a, b){return a-b}));
 
 </script>
 </body>

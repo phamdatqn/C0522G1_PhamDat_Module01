@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let inputNumber1=parseInt(prompt("Nhập số thứ 1: "));
+    let inputNumber2=parseInt(prompt("Nhập số thứ 2: "));
+    let sum1=0;
+    let sum2=0;
+    for (let i=1;i<inputNumber1;i++){
+        if (inputNumber1%i===0){
+            sum1+=i;
+        }
+
+    }
+    for (let j=1;j<inputNumber2;j++){
+        if (inputNumber2%j===0){
+            sum2+=j;
+        }
+
+    }
+    if (sum1===inputNumber2 && sum2===inputNumber1){
+        alert(inputNumber1+" "+inputNumber2+" là cặp số TT");
+    }else {
+        alert(inputNumber1+" "+inputNumber2+" không là cặp số TT");
+    }
+</script>
+</body>
+</html>

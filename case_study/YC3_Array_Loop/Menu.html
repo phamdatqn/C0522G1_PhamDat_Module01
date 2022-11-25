@@ -8,48 +8,49 @@
 <script>
     let input;
     let amount;
+    let total;
+    let question;
     do {
-        input = parseInt(prompt(' Oder theo phím mời bạn chọn:   1 (cafe),   2 (cam vắt),   3(nước ép cà rốt),' +
-            '   4(nước ép cà chua),   5(nước lọc),   6(nước dừa),   7(thoát gọi món)'));
+        input = parseInt(prompt(' Oder theo phím mời bạn chọn:   \n1 (cafe),   \n2 (cam vắt),   \n3(nước ép cà rốt),' +
+            '   \n4(nước ép cà chua),   \n5(nước lọc),   \n6(nước dừa),   \n7(thoát gọi món)'));
         switch (input) {
             case  1:
                 amount = parseInt(prompt('Bạn đang chọn nước Cafe có giá 10.000VNĐ mời nhập số lượng'));
-                confirm('Bạn chắc chắn muốn mua Cafe với số lượng là '+amount+" ?");
-                document.write("Chúc mừng bạn đã oder thành công. Tổng số tiền phải thanh toán cho " + amount + " ly Cafe là " + amount * 10000 + " VNĐ");
+                question= confirm('Bạn chắc chắn muốn mua Cafe với số lượng là '+amount+" ?");
+                total=amount*10000;
+                document.write("Tổng số tiền phải thanh toán cho " + amount + " ly Cafe là " +total + " VNĐ <br>");
                 break;
             case 2:
                 amount = parseInt(prompt('Bạn đang chọn Cam vắt có giá 12.000VNĐ mời nhập số lượng'));
-                confirm('Bạn chắc chắn muốn mua Cam vắt với số lượng là '+amount+" ?");
-                document.write("Chúc mừng bạn đã oder thành công. Tổng số tiền phải thanh toán cho " + amount + " Cam vắt là " + amount * 12000 + " VNĐ");
+                question=confirm('Bạn chắc chắn muốn mua Cam vắt với số lượng là '+amount+" ?");
+                total=amount*12000;
+                document.write("Tổng số tiền phải thanh toán cho " + amount + " Cam vắt là " + total + " VNĐ<br>");
                 break;
             case  3:
                 amount = parseInt(prompt('Bạn đang chọn Nước ép cà rốt có giá 15.000VNĐ mời nhập số lượng'));
-                confirm('Bạn chắc chắn muốn mua Nước ép cà rốt với số lượng là '+amount+" ?");
-                document.write("Chúc mừng bạn đã oder thành công. Tổng số tiền phải thanh toán cho " + amount + " Nước ép cà rốt là " + amount * 15000 + " VNĐ");
+                question=confirm('Bạn chắc chắn muốn mua Nước ép cà rốt với số lượng là '+amount+" ?");
+                document.write("Tổng số tiền phải thanh toán cho " + amount + " Nước ép cà rốt là " + amount * 15000 + " VNĐ<br>");
                 break;
             case 4:
                 amount = parseInt(prompt('Bạn đang chọn Nước ép cà chua có giá 17.000VNĐ mời nhập số lượng'));
-                confirm('Bạn chắc chắn muốn mua Nước ép cà chua với số lượng là '+amount+" ?");
-                alert("Chúc mừng bạn đã oder thành công. Tổng số tiền phải thanh toán cho " + amount + " Nước ép cà chua " + amount * 17000 + " VNĐ");
+                question= confirm('Bạn chắc chắn muốn mua Nước ép cà chua với số lượng là '+amount+" ?");
+                document.write("Tổng số tiền phải thanh toán cho " + amount + " Nước ép cà chua " + amount * 17000 + " VNĐ<br>");
                 break;
             case 5:
                 amount = parseInt(prompt('Bạn đang chọn Nước lọc có giá 8.000VNĐ mời nhập số lượng'));
-                confirm('Bạn chắc chắn muốn mua Nước lọc với số lượng là '+amount+" ?");
-                alert("Chúc mừng bạn đã oder thành công. Tổng số tiền phải thanh toán cho " + amount + " Nước lọc " + amount * 8000 + " VNĐ");
+                question=confirm('Bạn chắc chắn muốn mua Nước lọc với số lượng là '+amount+" ?");
+                document.write("Tổng số tiền phải thanh toán cho " + amount + " Nước lọc " + amount * 8000 + " VNĐ<br>");
                 break;
             case 6:
                 amount = parseInt(prompt('Bạn đang chọn Nước dừa có giá 25.000VNĐ mời nhập số lượng'));
-                confirm('Bạn chắc chắn muốn mua Nước dừa với số lượng là '+amount+" ?");
-                alert("Chúc mừng bạn đã oder thành công. Tổng số tiền phải thanh toán cho " + amount + " Nước dừa là " + amount * 25000 + " VNĐ");
+                question=confirm('Bạn chắc chắn muốn mua Nước dừa với số lượng là '+amount+" ?");
+                document.write("Tổng số tiền phải thanh toán cho " + amount + " Nước dừa là " + amount * 25000 + " VNĐ<br>");
                 break;
             default:
-                alert('Chúc Quý Khách ngon miệng !');
+                document.write('Chúc Quý Khách ngon miệng !');
         }
 
-    }
-    while (number !== 7)
-
-
+    } while (input !== 7 && question!==false || !(input>0 && input%1===0 ));
     // while (number!==7){
     //     if (number === 1) {
     //         number = parseInt(prompt('Bạn đang chọn nước Cafe có giá 10.000VNĐ mời nhập số lượng'));

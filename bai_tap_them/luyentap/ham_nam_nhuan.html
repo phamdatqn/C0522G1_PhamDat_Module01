@@ -12,24 +12,24 @@
     // năm chia hết cho 100 & 400 là năm nhuận
 
     let month = parseInt(prompt('Nhập tháng: '));
-    let year = parseInt(prompt("Enter a year"));
+    let year = parseInt(prompt("Nhập năm: "));
     //
-    let nhuan = true;
+    let nhuan = false;
     if (year % 4 === 0) {
         if (year % 100 === 0) {
-            if (year % 400 !== 0) {
-                nhuan = false;
+            if (year % 400 === 0) {
+                nhuan = true;
             }
+        }else {
+            nhuan = true;
         }
-    } else {
-        nhuan = false;
     }
     switch (month) {
         case 2:
             if (nhuan) {
-                document.getElementById('show').innerText = " Tháng 2 có 29 ngày ";
+                document.getElementById('show').innerText = " Tháng 2 năm " + year + " có: 29 ngày ";
             } else {
-                document.getElementById('show').innerText = " Tháng 2 có 28 ngày";
+                document.getElementById('show').innerText = " Tháng 2 năm " + year + " có: 28 ngày ";
             }
             break;
         case 1:
@@ -39,13 +39,13 @@
         case 8:
         case 10:
         case 12:
-            document.getElementById('show').innerText = "Tháng " + month + " là tháng có 31 ngày";
+            document.getElementById('show').innerText = "Tháng " + month + " năm "+year+" là tháng có: 31 ngày";
             break;
         case 4:
         case 6:
         case 9:
         case 11:
-            document.getElementById('show').innerText = "Tháng " + month + " là tháng có 30 ngày "
+            document.getElementById('show').innerText = "Tháng " + month +" năm "+year+ " là tháng có 30 ngày "
             break;
         default:
             document.getElementById('show').innerText = " Bạn nhập sai tháng, mời bạn nhập lại !!"

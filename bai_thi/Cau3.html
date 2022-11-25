@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let newArr = [];
+    let resultArr = [];
+    let count;
+    let input = parseInt(prompt('Nhập số lượng phần tử của mảng: '));
+    for (let i = 0; i < input; i++) {
+        arr[i] = parseInt(prompt("Nhập phần tử thứ " + (i + 1) + " của mảng"));
+    }
+    let number = parseInt(prompt("Nhập 1 số "));
+
+    function myFunction(arr, number) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % number === 0) {
+                newArr.push(arr[i]);
+            }
+        }
+        return newArr;
+    }
+
+    let result = myFunction(arr, number);
+    document.write("Mảng kết quả chia hết chưa loại số trùng " + result.join(" ") + "<br>");
+    for (let i = 0; i < result.length; i++) {
+        count = 0;
+        for (let j = 0; j < resultArr.length; j++) {
+            if (result[i] === resultArr[j]) {
+                count++;
+            }
+        }
+        if (count === 0) {
+            resultArr.push(result[i]);
+        }
+    }
+    document.write("Số chia hết cho " + number + " trong mảng là: " + resultArr.join() + "<br>");
+    document.write("vậy có " + resultArr.length + " số chia hết cho " + number);
+</script>
+</body>
+</html>

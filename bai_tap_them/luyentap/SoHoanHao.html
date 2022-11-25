@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input=parseInt(prompt("Nhập số: "));
+    let sum=0;
+    function checkHoanHao(number) {
+        for (let i=1;i<number;i++){
+            if (number%i===0){
+                sum+=i;
+            }
+        }
+        if (sum===number){
+            alert(input+"Là số hh")
+        }else {
+            alert(input+"Không là số hh")
+        }
+
+    }
+    checkHoanHao(input);
+</script>
+</body>
+</html>

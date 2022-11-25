@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let arrResult = [];
+    let input = prompt("Nhập số lượng phần tử mảng:");
+    for (let i = 0; i < input; i++) {
+        arr[i] = parseInt(prompt("Nhập phần tử thứ " + (i + 1) + " của mảng"));
+    }
+
+    function checkMinMax(arr) {
+        let indexMin;
+        let indexMax
+        for (let i = 1; i < arr.length; i++) {
+            indexMin = arr[0];
+            indexMax = arr[0];
+            if (arr[indexMin] > arr[i]) {
+                indexMin = i;
+
+            }
+            if (arr[indexMax] < arr[i]) {
+                arr[indexMax] = arr[i];
+                indexMax = i;
+
+            }
+        }
+        arrResult.push(indexMin);
+        arrResult.push(indexMax);
+        return arrResult;
+    }
+
+    let result = checkMinMax(arr);
+    document.write("["+result+"]");
+</script>
+</body>
+</html>

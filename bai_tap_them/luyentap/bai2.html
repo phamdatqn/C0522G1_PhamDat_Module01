@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="show"></p>
+<script>
+    let str = prompt("Nhập tháng/năm theo mm/yyyy:");
+    let arr = str.split("/")
+    // for (let value of str.split("/")) {
+    //     arr.push(value);
+    // }
+    function checkLeapYear(year) {
+        // if (year % 400 === 0) {
+        //     return true;
+        // }
+        // if (year % 4 === 0 && year % 100 !== 0) {
+        //     return true;
+        // }
+        // return false;
+        if (year % 4 === 0) {
+            if (year % 100 === 0) {
+                if (year % 400 === 0) {
+                    return true;
+                }
+            } else {
+                return true;
+            }
+        }
+        return false;
+    }
+    switch (arr[0]) {
+        case "02":
+            if (checkLeapYear(arr[1])) {
+                document.getElementById('show').innerHTML = " Tháng 2 năm " + arr[1] + " có: 29 ngày ";
+            } else {
+                document.getElementById('show').innerHTML = " Tháng 2 năm " + arr[1] + " có: 28 ngày ";
+            }
+            break;
+        case "01":
+        case "03":
+        case "05":
+        case "07":
+        case "08":
+        case "10":
+        case "12":
+            document.getElementById('show').innerHTML = "Tháng " + arr[0] + " năm "+arr[1]+" là tháng có: 31 ngày";
+            break;
+        case "04":
+        case "06":
+        case "09":
+        case "11":
+            document.getElementById('show').innerHTML = "Tháng " + arr[0] +" năm "+arr[1]+ " là tháng có 30 ngày "
+            break;
+        default:
+            document.getElementById('show').innerHTML = " Bạn nhập sai tháng, mời bạn nhập lại !!"
+    }
+
+
+</script>
+</body>
+</html>
